@@ -1,0 +1,29 @@
+{
+  "name": "Salon Orchard NYC",
+  "main": "index.html",
+  "version": "1.0",
+  "homepage": "http://www.salonorchardnyc.com",
+  "authors": [
+    "Sun Lee"
+  ],
+  "description": "Salon Orchard NYC",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.13",
+    "angular-sanitize": "~1.3.13",
+    "angular-route": "~1.3.14",
+    "angular-animate": "~1.3.13",
+    "angular-snap": "~1.8.1"
+  },
+  "resolutions": {
+    "angular": "~1.3.13"
+  }
+}
