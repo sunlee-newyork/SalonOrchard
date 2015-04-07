@@ -1,10 +1,14 @@
 'use strict';
 
-angular.module('SalonOrchardApp')
+angular.module('app')
 	.controller('mainController', ['$scope', function ($scope) {
 		
+		$scope.opts = {
+			disable: 'left'
+		};
+
 		$scope.template = [
-			{ name: '', url: '' },
+			{ name: 'about', url: '/views/content/about.html' },
 			{ name: '', url: '' }
 		]
 

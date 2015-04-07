@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('SalonOrchardApp', [
+angular.module('app', [
 		'ngSanitize',
 		'ngAnimate',
 		'ngRoute',
@@ -23,3 +23,13 @@ angular.module('SalonOrchardApp', [
 				redirectTo: '/home'
 			});
 	}])
+
+	.config(function (snapRemoteProvider) {
+    snapRemoteProvider.globalOptions = { 
+    	resistance: 0.8,
+    	flickThreshold: 30,
+    	minPosition: -200,
+    	disable: 'left', 
+    	touchToDrag: false
+    };
+  });

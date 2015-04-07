@@ -1,12 +1,6 @@
 <!-- HOME -->
-<div class="container main">
-
-	<div class="header">
-		<div class="logo"></div>
-		<!-- add snap toggle here -->
-	</div>
-
-	<div snap-drawer="right">
+<snap-drawers>
+	<div snap-drawer="right" class="menubar">
 		<div class="nav">Book</div>
 		<div class="nav">Menu</div>
 		<div class="nav">Products</div>
@@ -14,10 +8,23 @@
 		<div class="nav">Social</div>
 		<div class="nav">About</div>
 	</div>
+</snap-drawers>
 
-	<div snap-content ng-include="{{template.url}}" class="content">
-
+<snap-content class="main">
+	<div class="container">
+		<div class="header">
+			<div class="logo"></div>
+			<button snap-toggle="right" class="menubar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<!-- add snap toggle here -->
+		</div>
+		<div class="portal" ng-include="/views/content/about.html">
+			
+		</div>
 	</div>
+</snap-content>
 
-</div>
 <!-- END HOME -->
