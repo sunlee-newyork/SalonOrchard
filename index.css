@@ -1,7 +1,7 @@
 html, body, div, img, p, a, span {
 	color: #000;
 	margin: 0;
-	font-family: 'SUNN', Helvetica, Arial, sans-serif;
+	/*font-family: Helvetica, Arial, sans-serif;*/
 }
 html {
 	height: 100%;
@@ -111,11 +111,12 @@ a {
 	background: rgba(250, 100, 35, 1);
 }
 .snap-drawer {
-	width: 12%;
-	padding: 50px 0;
+	width: 200px;
+	padding: 50px 0 0 20px;
 }
 .snap-drawer .nav {
 	font-size: 3em;
+	font-family: 'SUNN';
 	color: #fff;
 }
 /* - end Snap Drawer - */
@@ -165,8 +166,23 @@ a {
 
 .main .portal {
 	height: 100%;
-	padding: 20px 0;
+	padding: 30px 50px;
 	font-family: 'Jaapokki';
 	font-weight: lighter;
 }
 /* - end Main Page - */
+
+/* - Services Content - */
+.services .content-body,
+.services .content-navbar {
+	display: block;
+	float: left;
+}
+.services .content-body {
+	width: 85%;
+	height: 100%;
+}
+.services .content-navbar {
+	width: 15%;
+}
+/* - end Services Content - */
