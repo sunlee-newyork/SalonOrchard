@@ -1,12 +1,12 @@
 <!-- HOME -->
 <snap-drawers>
 	<div snap-drawer="right" class="menubar">
-		<div class="nav">Book</div>
-		<div class="nav">Menu</div>
-		<div class="nav">Products</div>
-		<div class="nav">Stylists</div>
-		<div class="nav">Social</div>
-		<div class="nav">About</div>
+		<div class="nav" snap-close>Book</div>
+		<div class="nav" ng-click="template.url = templates[1].url" snap-close>Services</div>
+		<div class="nav" ng-click="template.url = templates[2].url" snap-close>Stylists</div>
+		<div class="nav" ng-click="template.url = templates[3].url" snap-close>Gallery</div>
+		<div class="nav" ng-click="template.url = templates[4].url" snap-close>Social</div>
+		<div class="nav" ng-click="template.url = templates[5].url" snap-close>About</div>
 	</div>
 </snap-drawers>
 
@@ -21,7 +21,7 @@
 			</button>
 			<!-- add snap toggle here -->
 		</div>
-		<div class="portal" ng-include="/views/content/about.html">
+		<div class="portal" ng-include="template.url">
 			
 		</div>
 	</div>

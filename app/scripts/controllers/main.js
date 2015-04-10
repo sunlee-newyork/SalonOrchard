@@ -7,9 +7,17 @@ angular.module('app')
 			disable: 'left'
 		};
 
-		$scope.template = [
-			{ name: 'about', url: '/views/content/about.html' },
-			{ name: '', url: '' }
+		$scope.templates = [
+			{ name: 'default' , url: 'app/views/content/default.html' },
+			{ name: 'services', url: 'app/views/content/services.html' },
+			{ name: 'stylists', url: 'app/views/content/stylists.html' },
+			{ name: 'gallery' , url: 'app/views/content/gallery.html' },
+			{ name: 'social'  , url: 'app/views/content/social.html' },
+			{ name: 'about'   , url: 'app/views/content/about.html' }
 		]
+
+		$scope.template = $scope.templates[0];
+
+		angular.element
 
 	}]);
