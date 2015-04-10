@@ -1,7 +1,6 @@
 html, body, div, img, p, a, span {
 	color: #000;
 	margin: 0;
-	/*font-family: Helvetica, Arial, sans-serif;*/
 }
 html {
 	height: 100%;
@@ -112,10 +111,11 @@ a {
 
 /* - Snap Drawer - */
 .snap-drawers {
-	background: rgba(250, 100, 35, 1);
+	background: rgba(248, 182, 140, 1);
+	border: 18px solid rgba(250, 100, 35, 1);
 }
 .snap-drawer {
-	width: 200px;
+	width: 215px;
 	padding: 50px 0 0 20px;
 }
 .snap-drawer .nav {
@@ -127,11 +127,11 @@ a {
 
 /* - Main Page - */
 .main {
-	background: rgb(238,191,163);
+	padding: 10px 0;
 	overflow: hidden;
-	background-image: url('/assets/imgs/20150326_200249.jpg');
 }
 .main .container {
+	position: relative;
 	width: 85%;
 	height: 100%;
 	padding: 30px 30px;
@@ -168,12 +168,11 @@ a {
 	border-radius: 5px;
 	background: #fff;
 }
-
 .main .portal {
 	height: 90%;
 	padding: 30px 50px;
-	font-family: 'Jaapokki';
-	font-weight: lighter;
+	font-family: 'SUNN';
+	font-size: 3em;
 }
 /* - end Main Page - */
 

@@ -28,7 +28,7 @@ angular.module('app', [
     snapRemoteProvider.globalOptions = { 
     	resistance: 0.8,
     	flickThreshold: 30,
-    	minPosition: -200,
+    	minPosition: -130,
     	disable: 'left', 
     	touchToDrag: false
     };
