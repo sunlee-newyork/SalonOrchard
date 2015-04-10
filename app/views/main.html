@@ -2,7 +2,7 @@
 <snap-drawers>
 	<div snap-drawer="right" class="menubar">
 		<div class="nav" snap-close>Book</div>
-		<div class="nav" ng-click="template.url = templates[1].url" snap-close>Services</div>
+		<div class="nav" ng-click="template.url = templates[1].url" href="#services" snap-close>Services</div>
 		<div class="nav" ng-click="template.url = templates[2].url" snap-close>Stylists</div>
 		<div class="nav" ng-click="template.url = templates[3].url" snap-close>Gallery</div>
 		<div class="nav" ng-click="template.url = templates[4].url" snap-close>Social</div>
@@ -13,7 +13,7 @@
 <snap-content class="main">
 	<div class="container">
 		<div class="header">
-			<div class="logo"></div>
+			<div class="logo" ng-click="goHome()"></div>
 			<button snap-toggle="right" class="menubar-toggle">
 				<span></span>
 				<span></span>

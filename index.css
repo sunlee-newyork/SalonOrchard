@@ -30,7 +30,11 @@ a {
 .container {
 	margin: 0 auto;
 }
-
+.snap-drawer .nav:hover,
+.main .header .logo:hover,
+.services .content-navbar span:hover {
+	cursor: pointer;
+}
 /* - end GLOBALS - */
 
 /* - Site View - */
@@ -125,6 +129,7 @@ a {
 .main {
 	background: rgb(238,191,163);
 	overflow: hidden;
+	background-image: url('/assets/imgs/20150326_200249.jpg');
 }
 .main .container {
 	width: 85%;
@@ -133,7 +138,7 @@ a {
 	background: #fff;
 }
 .main .header {
-	height: 65px;
+	height: 10%;
 }
 .main .header .logo {
 	width: 75px;
@@ -165,7 +170,7 @@ a {
 }
 
 .main .portal {
-	height: 100%;
+	height: 90%;
 	padding: 30px 50px;
 	font-family: 'Jaapokki';
 	font-weight: lighter;
@@ -173,16 +178,31 @@ a {
 /* - end Main Page - */
 
 /* - Services Content - */
+.services {
+	height: 100%;
+}
 .services .content-body,
 .services .content-navbar {
 	display: block;
 	float: left;
 }
 .services .content-body {
-	width: 85%;
+	width: 90%;
 	height: 100%;
 }
 .services .content-navbar {
-	width: 15%;
+	width: 10%;
+	height: 100%;
+	text-align: right;
+	border-left: 1px solid #444;
+}
+.services .content-navbar span {
+	display: block;
+}
+.services .menu .item span {
+	display: inline-block;
+}
+.services .menu .item .name {
+	width: 400px;
 }
 /* - end Services Content - */
