@@ -1,7 +1,7 @@
 html, body, div, img, p, a, span {
 	color: #000;
 	margin: 0;
-	/*font-family: Helvetica, Arial, sans-serif;*/
+	font-family: 'SUNN', Helvetica, Arial, sans-serif;
 }
 html {
 	height: 100%;
@@ -20,20 +20,47 @@ div {
 a {
 	text-decoration: none;
 }
-
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
 /* - FONTS - */
 @font-face { font-family: 'SUNN'; src: url('/assets/fonts/SUNN.otf') format('opentype'); }
 @font-face { font-family: 'Jaapokki'; src: url('/assets/fonts/Jaapokki.otf') format('opentype'); }
 /* - end FONTS - */
 
+/* - ANIMATIONS - */
+@-webkit-keyframes shake {
+	0% { -webkit-transform: rotate(0deg); }
+	10% { -webkit-transform: rotate(5deg); }
+	20% { -webkit-transform: rotate(10deg); }
+	30% { -webkit-transform: rotate(25deg); }
+	40% { -webkit-transform: rotate(50deg); }
+	50% { -webkit-transform: rotate(90deg); }
+	60% { -webkit-transform: rotate(140deg); }
+	70% { -webkit-transform: rotate(210deg); }
+	80% { -webkit-transform: rotate(270deg); }
+	90% { -webkit-transform: rotate(320deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+/* - end ANIMATIONS - */
+
 /* - GLOBALS - */
 .container {
 	margin: 0 auto;
 }
+.snap-drawer .nav,
+.main .header .logo,
+.main .header .menubar-toggle,
+.services .content-navbar a {
+	-webkit-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
 .snap-drawer .nav:hover,
 .main .header .logo:hover,
-.services .content-navbar span:hover {
+.main .header .menubar-toggle:hover,
+.services .content-navbar a:hover {
 	cursor: pointer;
+	opacity: 1;
 }
 /* - end GLOBALS - */
 
@@ -84,16 +111,16 @@ a {
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-.intro .container .face-1 {
+.face-1 {
 	background: url(/assets/imgs/face-1.jpg);
 }
-.intro .container .face-2 {
+.face-2 {
 	background: url(/assets/imgs/face-2.jpg);
 }
-.intro .container .face-3 {
+.face-3 {
 	background: url(/assets/imgs/face-3.jpg);
 }
-.intro .container .face-4 {
+.face-4 {
 	background: url(/assets/imgs/face-4.jpg);
 }
 .intro .container .face-1,
@@ -112,7 +139,8 @@ a {
 
 /* - Snap Drawer - */
 .snap-drawers {
-	background: rgba(250, 100, 35, 1);
+	border: 8px solid rgba(158, 83, 35, .8);
+	background: rgb(238,191,163);
 }
 .snap-drawer {
 	width: 200px;
@@ -120,32 +148,76 @@ a {
 }
 .snap-drawer .nav {
 	font-size: 3em;
-	font-family: 'SUNN';
+	color: #fff;
+	opacity: .7;
+}
+.snap-drawer .nav:hover {
+	font-size: 3.2em;
+	font-weight: lighter;
 	color: #fff;
 }
 /* - end Snap Drawer - */
 
+/* - Background Faces - */
+.background-img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 30%;
+	opacity: .15;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.background-img.face-3 {
+	left: 0;
+}
+.background-img.face-2 {
+	right: 0;
+}
+/* - end Background Faces - */
+
 /* - Main Page - */
 .main {
-	background: rgb(238,191,163);
+	width: 85%;
+	margin: 0 auto;
+	background: #fff;
 	overflow: hidden;
-	background-image: url('/assets/imgs/20150326_200249.jpg');
+	/*border: 12px solid rgba(255,229,204,.8);
+	border-bottom: 8px solid rgba(255,229,204,.8);*/
+}
+.main .container-bg {
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	background: rgba(255,229,204,.8);
 }
 .main .container {
-	width: 85%;
+	position: relative;
+	top: 50%;
+	/* width: 95%; */
 	height: 100%;
 	padding: 30px 30px;
 	background: #fff;
+	border-radius: 30px;
+	transform: translateY(-50%);
 }
 .main .header {
-	height: 10%;
+	height: 60px;
 }
 .main .header .logo {
+	float: left;
 	width: 75px;
 	height: 100%;
 	background: url(/assets/imgs/logo-green.png) no-repeat center center;
 	background-size: contain;
-	float: left;
+	opacity: .8;
+}
+.main .header .logo:hover {
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	transform: rotate(-15deg);
 }
 .main .header .menubar-toggle {
 	position: relative;
@@ -159,6 +231,14 @@ a {
 	outline: none;
 	background: rgb(130, 68, 0);
 	border: 4px solid rgb(208, 158, 130);
+	opacity: .8;
+}
+.main .header .menubar-toggle:hover {
+	-webkit-animation-name: shake;
+	-webkit-animation-duration: .5s;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in-out;
 }
 .main .header .menubar-toggle span {
 	display: block;
@@ -170,39 +250,103 @@ a {
 }
 
 .main .portal {
-	height: 90%;
-	padding: 30px 50px;
-	font-family: 'Jaapokki';
+	height: 100%;
+	padding: 30px 50px 100px;
 	font-weight: lighter;
+	font-size: 2em;
 }
 /* - end Main Page - */
+
+/* - Book Content - */
+.book {
+	height: 100%;
+}
+.book iframe {
+	border: none;
+}
+/* - end Book Content - */
 
 /* - Services Content - */
 .services {
 	height: 100%;
 }
-.services .content-body,
 .services .content-navbar {
+	width: 25%;
+	height: 50px;
+	margin: -80px auto 50px;
+	padding: 0 10px;
+	text-align: center;
+	border-bottom: 4px solid rgba(85,10,0,1);
+	overflow: hidden;
+}
+.services .content-navbar a {
 	display: block;
 	float: left;
+	width: 48%;
+	height: 100%;
+	margin-top: 24px;
+	line-height: 50px;
+	background: rgba(130,68,0,1);
+	color: rgb(255,255,255);
+	opacity: .7;
+}
+.services .content-navbar a.products-nav {
+	float: right;
+}
+.services .content-navbar a:hover {
+	margin-top: 0;
+}
+.services .cnotent-navbar a.active {
+	margin-top: 0;
 }
 .services .content-body {
 	width: 90%;
 	height: 100%;
+	margin: 50px auto;
+	overflow: auto;
 }
-.services .content-navbar {
-	width: 10%;
+.services .content-section {
+	margin: 0 auto 10px;
+}
+/*.services .scroll-arrow {
+	bottom: 0;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	background: url('/assets/icons/arrow-down.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: .8;
+}
+.services .scroll-arrow:hover {
+	width: 43px;
+	height: 43px;
+}*/
+.services .content-section.menu {
+	float: left;
+	width: 65%;
 	height: 100%;
-	text-align: right;
-	border-left: 1px solid #444;
+	padding: 0 0 0 50px;
 }
-.services .content-navbar span {
-	display: block;
-}
-.services .menu .item span {
+.services .content-section.menu .item span {
 	display: inline-block;
 }
-.services .menu .item .name {
-	width: 400px;
+.services .content-section.menu .item .name {
+	width: 80%;
+}
+.services .menu-img {
+	float: left;
+	width: 35%;
+	height: 100%;
+	background: url('/assets/imgs/snapshots/20150326_200249.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	opacity: .8;
+	border-radius: 15px;
+	/* box-shadow: inset 0 0 20px #000; */
+}
+.services .content-section.products {
+	width: 100%;
 }
 /* - end Services Content - */

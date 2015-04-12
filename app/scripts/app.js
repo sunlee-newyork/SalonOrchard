@@ -4,7 +4,8 @@ angular.module('app', [
 		'ngSanitize',
 		'ngAnimate',
 		'ngRoute',
-		'snap'
+		'snap',
+		'duScroll'
 	])
 
 	.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
@@ -28,7 +29,7 @@ angular.module('app', [
     snapRemoteProvider.globalOptions = { 
     	resistance: 0.8,
     	flickThreshold: 30,
-    	minPosition: -200,
+    	minPosition: -110,
     	disable: 'left', 
     	touchToDrag: false
     };
