@@ -1,41 +1,26 @@
 <div class="services">
-	<div class="content-navbar">
-		<a 
-			class="menu-nav" 
-			href="#menu" 
-			du-smooth-scroll du-scrollspy offset="10">
-			Menu
-		</a>
-		<a 
-			class="products-nav" 
-			href="#products" 
-			du-smooth-scroll 
-			du-scrollspy offset="10">
-			Products
-		</a>	
+	<div class="content-navbar" du-scroll-container="scroll-container">
+		<a class="menu-nav" href="#menu" du-smooth-scroll du-scrollspy offset="10">Menu</a>
+		<a class="products-nav" href="#products" du-smooth-scroll du-scrollspy offset="10">Products</a>	
 	</div>
-	<div class="content-body">
-<!-- 		<div class="services-img-1"></div>
-		<div class="services-img-2"></div>
-		<div class="services-img-3"></div> -->
-		<div class="menu-img"></div>
+	<div id="scroll-container" class="content-body">
+		
 		<div id="menu" class="content-section menu">
-			<div class="item" ng-repeat="item in menu">
-				<h3>{{item.category}}</h3>
-				<!-- <h3>{{item.services}}</h3> -->
-				<div ng-repeat"service in item.services">{{service.name}}</div>
-				<!-- <ul class="category-each" ng-repeat"service in item.services">
-					<li>{{service.name}}</li>
-					<li>{{service.price}}</li>
-				</ul> -->
+			<div class="img"></div>
+			<div class="items">
+				<div class="category-wrapper" ng-repeat="item in menu">
+					<span class="category">{{item.category}}</span>
+					<div class="item" ng-repeat="service in item.services">
+						<span class="name">{{service.name}}</span>
+						<span class="price">{{service.price}}</span>
+					</div>
+				</div>	
 			</div>
 		</div>	
 
 		<div id="products" class="content-section products">
 			<h2>Products</h2>
 		</div>
-	</div>
-	<div>
-		<button ng-click="scrollToTop()">To the top!</button>
+
 	</div>
 </div>
