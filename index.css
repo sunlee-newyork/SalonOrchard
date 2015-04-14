@@ -26,6 +26,13 @@ h1, h2, h3, h4, h5, h6 {
 /* - FONTS - */
 @font-face { font-family: 'SUNN'; src: url('/assets/fonts/SUNN.otf') format('opentype'); }
 @font-face { font-family: 'Jaapokki'; src: url('/assets/fonts/Jaapokki.otf') format('opentype'); }
+@font-face { font-family: 'Billy'; src: url('/assets/fonts/billy.ttf') format('truetype'); }
+@font-face { font-family: 'Chomp'; src: url('/assets/fonts/Chomp.ttf') format('truetype'); }
+@font-face { font-family: 'MoonLight'; src: url('/assets/fonts/Moon/MoonLight.otf') format('opentype'); }
+@font-face { font-family: 'MoonBold'; src: url('/assets/fonts/Moon/MoonBold.otf') format('opentype'); }
+@font-face { font-family: 'Simplifica'; src: url('/assets/fonts/Simplifica.ttf') format('truetype'); }
+@font-face { font-family: 'Panton'; src: url('/assets/fonts/Panton/PantonLightCaps.otf') format('opentype'); }
+@font-face { font-family: 'Asgalt'; src: url('/assets/fonts/Asgalt.ttf') format('truetype'); }
 /* - end FONTS - */
 
 /* - ANIMATIONS - */
@@ -47,6 +54,14 @@ h1, h2, h3, h4, h5, h6 {
 /* - GLOBALS - */
 .container {
 	margin: 0 auto;
+}
+.vertical {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 .snap-drawer .nav,
 .main .header .logo,
@@ -144,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .snap-drawer {
 	width: 200px;
-	padding: 50px 0 0 20px;
+	padding: 50px 0 0 15px;
 }
 .snap-drawer .nav {
 	font-size: 3em;
@@ -326,20 +341,53 @@ h1, h2, h3, h4, h5, h6 {
 .services .menu .items {
 	width: 65%;
 	float: left;
-	padding: 0 0 0 50px;
+	padding: 25px 0 0 50px;
 }
 .services .menu .items .category-wrapper {
-	width: 100%;
-}
-.services .menu .items .category {
-	display: inline-block;
 	float: left;
-	-webkit-transform: rotate(-90deg);
-	transform: rotate(-90deg);
+	width: 100%;
+	height: 150px;
+	margin: 0 0 30px 0;
+	/* font-family: 'Billy'; */
+}
+.services .menu .items .category-name {
+	float: left;
+	width: 23%;
+	line-height: 53px;
+}
+.services .menu .items .category-name.color {
+	float: right;
+	text-align: right;
+}
+.services .menu .items .category-name .category {
+	display: block;
+	width: 100%;
 	font-size: 2em;
+	font-family: 'MoonLight';
+	color: rgba(65,10,0,1);
+	text-transform: uppercase;
+	word-break: break-all;
+}
+.services .menu .items .item-wrapper {
+	float: left;
+	width: 75%;
+	padding: 0 0 0 30px;
+}
+.services .menu .items .item-wrapper.color {
+	padding: 0 30px 0 0;
 }
 .services .menu .items .item {
+	width: 100%;
+	height: 30px;
 	float: left;
+}
+.services .menu .items .item span {
+	font-family: 'SUNN';
+	font-size: .85em;
+	letter-spacing: 1px;
+}
+.services .menu .items .item .price {
+	float: right;
 }
  .content-section.products {
 	float: left;

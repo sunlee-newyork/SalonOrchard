@@ -8,13 +8,19 @@
 		<div id="menu" class="content-section menu">
 			<div class="img"></div>
 			<div class="items">
+
+				<!-- Start Category repeat -->
 				<div class="category-wrapper" ng-repeat="item in menu">
-					<span class="category">{{item.category}}</span>
-					<div class="item" ng-repeat="service in item.services">
-						<span class="name">{{service.name}}</span>
-						<span class="price">{{service.price}}</span>
+					<div class="category-name {{item.category}} vertical"><span class="category">{{item.category}}</span></div>
+					<div class="item-wrapper {{item.category}} vertical">
+						<div class="item" ng-repeat="service in item.services">
+							<span class="name">{{service.name}}</span>
+							<span class="price">{{service.price}}</span>
+						</div>
 					</div>
 				</div>	
+				<!-- End Category repeat -->
+
 			</div>
 		</div>	
 
