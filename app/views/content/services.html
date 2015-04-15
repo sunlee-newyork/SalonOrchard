@@ -1,4 +1,4 @@
-<div class="services">
+<div class="content services">
 	<div class="content-navbar" du-scroll-container="scroll-container">
 		<a class="menu-nav" href="#menu" du-smooth-scroll du-scrollspy offset="10">Menu</a>
 		<a class="products-nav" href="#products" du-smooth-scroll du-scrollspy offset="10">Products</a>	
@@ -24,8 +24,27 @@
 			</div>
 		</div>	
 
-		<div id="products" class="content-section products">
-			<h2>Products</h2>
+		<div id="products" class="content-section products">			
+			<div class="items">
+
+				<!-- Start Category repeat -->
+				<div class="category-wrapper" ng-repeat="item in products">
+					<div class="category-name {{item.category}}"><span class="category">{{item.category}}</span></div>
+					<div class="item-wrapper {{item.category}}">
+						<div class="item" ng-repeat="product in item.stock">
+							<img class="product-img" src="{{product.images[0]}}" async="async"/>
+							<div class="product-info">
+								<span class="name">{{product.name}}</span>
+								<span class="price">{{product.price}}</span>
+								<span class="description">{{product.description}}</span>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<!-- End Category repeat -->
+
+			</div>
+			<div class="img"></div>
 		</div>
 
 	</div>

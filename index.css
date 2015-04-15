@@ -270,6 +270,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* - end Main Page - */
 
+/* - Content - */
+
+.content {
+	height: 100%;
+}
+
 /* - Book Content - */
 .book {
 	height: 100%;
@@ -280,9 +286,6 @@ h1, h2, h3, h4, h5, h6 {
 /* - end Book Content - */
 
 /* - Services Content - */
-.services {
-	height: 100%;
-}
 .services .content-navbar {
 	width: 25%;
 	height: 50px;
@@ -322,6 +325,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto 10px;
 	height: 100%;
 }
+/* - Services Content [Menu] - */
 .services .content-section.menu {
 	float: left;
 	width: 100%;
@@ -384,13 +388,66 @@ h1, h2, h3, h4, h5, h6 {
 .services .menu .items .item span {
 	font-family: 'SUNN';
 	font-size: .85em;
+	font-weight: bold;
+	/*color: rgba(65,10,0,1);*/
 	letter-spacing: 1px;
 }
 .services .menu .items .item .price {
 	float: right;
+	/*color: rgba(31,63,0,1);*/
 }
- .content-section.products {
+/* - end Services Content [Menu] - */
+/* - Services Content [Products] - */
+.services .content-section.products {
 	float: left;
 	width: 100%;
+	padding-top: 10px;
 }
+.services .products .category-wrapper {
+	float: left;
+	width: 50%;
+	height: 50%;
+}
+.services .products .category-name,
+.services .products .item-wrapper {
+	float: left;
+}
+.services .products .category-name {
+	width: 20%;
+}
+.services .products .item-wrapper {
+	width: 80%;
+}
+.services .products .items .item {
+	width: 100%;
+	height: 50px;
+}
+.services .products .items .item .product-img {
+	float: left;
+	width: 100px;
+	height: auto;
+}
+/* - end Services Content [Products] - */
 /* - end Services Content - */
+
+/* - Stylists Content - */
+.stylists .content-navbar {
+	float: left;
+	width: 40px;
+	margin: 0 0 20px 0;
+}
+.stylists .content-navbar a {
+	display: block;
+	height: 198px;
+	margin: 10px 0;
+	padding: 16px 15px;
+	line-height: 29px;
+	background: rgba(130,68,0,1);
+	color: rgb(255,255,255);
+}
+.stylists .content-body {
+	float: left;
+	width: 90%;
+}
+/* - end Stylists Content - */
+/* - end Content - */

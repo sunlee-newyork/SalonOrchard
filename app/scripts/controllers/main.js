@@ -9,10 +9,12 @@ angular.module('app')
 		// 	$location.path("/home");
 		// }
 
-    var contentBody = angular.element(document.getElementsByClassName('content-body'));
+    
 
-    $scope.scrollToTop = function() {
-      contentBody.scrollTop(0, 5000);
+    $scope.scrollToSection = function(elem) {
+    	var contentBody = angular.element(document.getElementsByClassName('content-body'));
+
+      contentBody.scrollToElementAnimated()
     }
 
 		$scope.opts = {
@@ -28,7 +30,7 @@ angular.module('app')
 			{ name: 'about'   , url: 'app/views/content/about.html' }
 		]
 
-		$scope.template = $scope.templates[1];
+		$scope.template = $scope.templates[2];
 
 		$scope.menu = [
 			{ category: 'simple', services: [
@@ -53,6 +55,39 @@ angular.module('app')
 					{ name: 'Body Wave/Permanent Wave', price: '$200' }
 				] 
 			}
+		]
+
+		$scope.products = [
+			{ category: 'shampoo', stock: [
+				{ name: 'True Hue™ Anti-Fading Shampoo', description: '', price: '$17', images: ['/assets/imgs/products/shampoo_truehue_anti-fading.jpg']},
+				{ name: 'True Hue™ Highlights Shampoo', description: '', price: '$17', images: ['/assets/imgs/products/shampoo_truehue_highlights.jpg']},
+				{ name: 'True Hue™ Pure Moisturizing', description: '', price: '$17', images: ['/assets/imgs/products/shampoo_truehue_puremoisturizing.jpg']}
+			] },
+			{ category: 'conditioner', stock: [
+				{ name: 'ColorMoist™ Conditioner', description: '', price: '$18', images: ['/assets/imgs/products/conditioner_colormoist.jpg']}
+			] },
+			{ category: 'treatment', stock: [
+				{ name: 'Indulge Masque Hair Repair Treatment', description: '', price: '$20', images: ['/assets/imgs/products/treatment_indulgemasque.jpg']},
+				{ name: 'Straight & Smooth Anti-Frizz and Straightening Balm', description: '', price: '$19', images: ['/assets/imgs/products/treatment_straightandsmooth.jpg']},
+				{ name: 'Elixir 11', description: '', price: '$20', images: [
+					'/assets/imgs/products/treatment_elixir11_1.jpg',
+					'/assets/imgs/products/treatment_elixir11_2.jpg',
+					'/assets/imgs/products/treatment_elixir11_3.jpg'
+				]}
+			] },
+			{ category: 'styling', stock: [
+				{ name: 'DiaTHIX Hair Thickening Serum', description: '', price: '$30', images: [
+					'/assets/imgs/products/styling_diathix_1.jpg',
+					'/assets/imgs/products/styling_diathix_2.jpg',
+					'/assets/imgs/products/styling_diathix_3.jpg'
+				]},
+				{ name: 'Tousling Spray', description: '', price: '$22', images: [
+					'/assets/imgs/products/styling_touslingspray_1.jpg',
+					'/assets/imgs/products/styling_touslingspray_2.jpg',
+					'/assets/imgs/products/styling_touslingspray_3.jpg'
+				]},
+				{ name: '', description: '', price: '', images: ['']}
+			] }
 		]
 
 	}]);
