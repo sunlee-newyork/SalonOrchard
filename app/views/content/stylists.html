@@ -1,5 +1,5 @@
-<div class="content stylists">
-	<div class="content-navbar vertical">
+<div class="content stylists" ng-controller="stylistsController">
+	<div class="content-navbar vertical" du-scroll-container="stylists-scroll-container">
 		<a class="chie-nav" href="#chie" du-smooth-scroll du-scrollspy offset="10">C h i e
 		</a>
 		<a class="mark-nav" href="#mark" du-smooth-scroll du-scrollspy offset="10">M a r k
@@ -8,18 +8,26 @@
 		</a>	
 	</div>
 
-	<div id="scroll-container" class="content-body vertical">
+	<div id="stylists-scroll-container" class="content-body">
 
-		<div id="chie" class="content-section chie">
+		<div ng-repeat="stylist in stylists" id="{{stylist.name}}" class="content-section {{stylist.name}}">
 
-		</div>
+			
 
-		<div id="mark" class="content-section mark">
-
-		</div>
-
-		<div id="arnulfo" class="content-section arnulfo">
-
+			<!-- <div class="content-section-wrapper"> -->
+				<div class="content-section-header">
+					<img class="stylist-avatar" src="{{stylist.avatar}}" />
+					<div class="stylist-name-title-wrapper">
+						<span class="stylist-name">{{stylist.title}}</span>
+						<span class="stylist-title">{{stylist.name}}</span>
+					</div>
+				</div>
+				<div class="content-section-body">
+					<p class="stylist-summary">{{stylist.summary}}</p>
+					<span ng-if="{{stylist.website}}" class="stylist-website">{{stylist.website}}</span>
+				</div>
+			<!-- </div> -->
+			
 		</div>
 
 	</div>

@@ -206,14 +206,10 @@ h1, h2, h3, h4, h5, h6 {
 	background: rgba(255,229,204,.8);
 }
 .main .container {
-	position: relative;
-	top: 50%;
-	/* width: 95%; */
 	height: 100%;
 	padding: 30px 30px;
 	background: #fff;
 	border-radius: 30px;
-	transform: translateY(-50%);
 }
 .main .header {
 	height: 60px;
@@ -267,6 +263,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 30px 50px 100px;
 	font-weight: lighter;
 	font-size: 2em;
+	/* overflow: auto; */
 }
 /* - end Main Page - */
 
@@ -274,6 +271,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .content {
 	height: 100%;
+	 overflow: auto; 
 }
 
 /* - Book Content - */
@@ -319,7 +317,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 95%;
 	height: 100%;
 	margin: 50px auto;
-	overflow: hidden;
+	/*overflow: auto;*/
 }
 .services .content-section {
 	margin: 0 auto 10px;
@@ -432,22 +430,63 @@ h1, h2, h3, h4, h5, h6 {
 
 /* - Stylists Content - */
 .stylists .content-navbar {
+	position: absolute;
 	float: left;
 	width: 40px;
 	margin: 0 0 20px 0;
 }
 .stylists .content-navbar a {
 	display: block;
-	height: 198px;
+	height: 126px;
 	margin: 10px 0;
-	padding: 16px 15px;
-	line-height: 29px;
+	padding: 17px 9px;
+	line-height: 19px;
 	background: rgba(130,68,0,1);
 	color: rgb(255,255,255);
+	text-align: center;
+	font-family: 'Billy';
+}
+.stylists .content-navbar a.chie-nav {
+	height: 70px;
+}
+.stylists .content-navbar a.mark-nav {
+	height: 72px;
 }
 .stylists .content-body {
 	float: left;
+	width: 100%;
+	height: 100%;
+	padding: 20px 0;
+}
+.stylists .content-body .content-section {
+	float: right;
 	width: 90%;
+	height: 100%;
+	margin: 0 0 20px 0;
+	padding: 35px;
+	border-radius: 30px;
+	background: rgba(55,75,120,.8);
+}
+.stylists .content-body img {
+	float: left;
+	margin: 0 30px 0 0;
+	border-radius: 15px;
+}
+.stylists .content-body .content-section-header span {
+	display: inline-block;
+	float: right;
+	margin: 0 0 0 13px;
+	padding: 24px;
+	font-weight: 900;
+	font-size: 1.5em;
+	text-align: center;
+	line-height: 22px;
+	background: #fff;
+	border-radius: 15px;
+}
+.stylists .content-body .content-section-body p {
+	color: rgba(255,255,189,1);
+	/* letter-spacing: .5px; */
 }
 /* - end Stylists Content - */
 /* - end Content - */
