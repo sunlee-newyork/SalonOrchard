@@ -22,6 +22,6 @@ angular.module('app')
 			{ name: 'about'   , url: 'app/views/content/about.html' }
 		]
 
-		$scope.template = $scope.templates[2];
+		$scope.template = $scope.templates[3];
 
 	}]);

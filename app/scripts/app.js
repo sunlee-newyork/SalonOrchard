@@ -5,7 +5,8 @@ angular.module('app', [
 		'ngAnimate',
 		'ngRoute',
 		'snap',
-		'duScroll'
+		'duScroll',
+		'angular-packery'
 	])
 
 	.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {

@@ -1,1 +1,18 @@
-<h2>Gallery<h2>
+<div class="content gallery" ng-controller="galleryController">
+
+	<div class="content-header">
+		<h1>Salon Orchard Gallery</h1>
+	</div>
+
+	<div class="content-body">
+		<packery ng-init="gallery" draggable="false">
+			<packery-object id="packery-container" ng-repeat="item in gallery" ng-click="openOverlay(item)">
+				<img src="{{item}}" />
+				<div class="overlay" ng-click="closeOverlay(item)" ng-class="{active:isSelected(item)}">
+					<img src="{{item}}">
+				</div>
+			</packery-object>
+		</packery>
+	</div>
+
+</div>

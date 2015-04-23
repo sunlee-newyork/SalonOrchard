@@ -1,3 +1,9 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
 html, body, div, img, p, a, span {
 	color: #000;
 	margin: 0;
@@ -10,12 +16,6 @@ html {
 body {
 	position: relative;
 	height: 100%;
-}
-div {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
 }
 a {
 	text-decoration: none;
@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* - Snap Drawer - */
 .snap-drawers {
-	border: 8px solid rgba(158, 83, 35, .8);
+	border: 8px solid rgba(158, 83, 35, 1);
 	background: rgb(238,191,163);
 }
 .snap-drawer {
@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	background: url(/assets/imgs/logo-green.png) no-repeat center center;
 	background-size: contain;
-	opacity: .8;
+	/* opacity: .8; */
 }
 .main .header .logo:hover {
 	-webkit-transform: rotate(-15deg);
@@ -240,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
 	outline: none;
 	background: rgb(130, 68, 0);
 	border: 4px solid rgb(208, 158, 130);
-	opacity: .8;
+	/* opacity: .8; */
 }
 .main .header .menubar-toggle:hover {
 	-webkit-animation-name: shake;
@@ -271,7 +271,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .content {
 	height: 100%;
-	 overflow: auto; 
+	 
+	/* overflow: auto; */ 
 }
 
 /* - Book Content - */
@@ -312,12 +313,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .services .content-navbar a.active {
 	margin-top: 0;
+	opacity: 1;
 }
 .services .content-body {
 	width: 95%;
 	height: 100%;
 	margin: 50px auto;
-	/*overflow: auto;*/
+	overflow: auto;
 }
 .services .content-section {
 	margin: 0 auto 10px;
@@ -486,7 +488,84 @@ h1, h2, h3, h4, h5, h6 {
 }
 .stylists .content-body .content-section-body p {
 	color: rgba(255,255,189,1);
-	/* letter-spacing: .5px; */
 }
 /* - end Stylists Content - */
+
+/* - Gallery Content - */
+.gallery .content-header {
+	height: 85px;
+	margin: -90px 0 20px;
+	text-align: center;
+}
+.gallery .content-header h1 {
+
+}
+.gallery .content-body {
+	height: 100%;
+	overflow: auto;
+}
+.gallery .content-body .packery-container {
+	float: left;
+}
+/* clearfix */
+.gallery .content-body .packery-container:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.gallery .content-body .packery-sizer,
+.gallery .content-body .packery-container .packery-object {
+	width: 20%;
+}
+/*.gallery .content-body .packery-sizer:nth-child(4n+3),
+.gallery .content-body .packery-container .packery-object:nth-child(4n+3) {
+	width: 50%;
+}*/
+.gallery .content-body .packery-container .packery-object {
+  float: left;
+  -webkit-transition: width 0.4s ease-in-out;
+ 	-moz-transition: width 0.4s ease-in-out;
+  -ms-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+.gallery .content-body .packery-container .packery-object img {
+	width: 100%;
+	margin-bottom: -9px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+.gallery .content-body .packery-container .packery-object img:hover {
+	cursor: pointer;
+	opacity: 1;	
+	-webkit-filter: grayscale(0%);
+}
+.gallery .content-body .packery-container .packery-object .overlay {
+	position: fixed;
+	display: none;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #222;
+	opacity: .8;
+/*	-webkit-transition: opacity .2s ease-in;
+  -moz-transition: opacity .2s ease-in;
+  -ms-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;*/
+	z-index: 9999;
+}
+.gallery .content-body .packery-container .packery-object .overlay.active {
+	display: block;
+}
+/*.gallery .content-body .packery-container .packery-object .overlay:hover {
+	opacity: .9;
+}*/
+/* - end Gallery Content - */
+
 /* - end Content - */
