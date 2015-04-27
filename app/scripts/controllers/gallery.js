@@ -4,18 +4,15 @@ angular.module('app')
 	.controller('galleryController', ['$scope',
 	function ($scope) {
 
-		// $scope.packeryContainer = document.querySelector('#packery-container');
+		$scope.selected = '/assets/imgs/snapshots/20150326_200400.jpg';
 
-		$scope.openOverlay = function (item) {
+		$scope.toggleSize = function (item) {
 			$scope.selected = item;
 		}
-		$scope.closeOverlay = function (item) {
-			$scope.selected = false;
-		}
 
-		$scope.isSelected = function (item) {
-			return $scope.selected === item;
-		}
+		// $scope.isSelected = function (item) {
+		// 	return $scope.selected === item;
+		// }
 
 		$scope.gallery = [
 			'/assets/imgs/stock-generic/beef-stock.jpg',
@@ -33,7 +30,11 @@ angular.module('app')
 			'/assets/imgs/stock-generic/Stock-Market1.jpg',
 			'/assets/imgs/stock-generic/antwerp-belgium-stock-exchange-abandoned.jpg',
 			'/assets/imgs/stock-generic/Tree_stock_by_lillyfly06_stock.jpg',
-			'/assets/imgs/stock-generic/free-stock-nature-photos.jpg'
+			'/assets/imgs/stock-generic/free-stock-nature-photos.jpg',
+			'/assets/imgs/stock-generic/wall-st.jpg',
+			'/assets/imgs/stock-generic/beef_stock_16x9.jpg',
+			'/assets/imgs/stock-generic/12_07_how_to_find_hair_models_show.jpg',
+			'/assets/imgs/stock-generic/download (1).jpeg'
 		]
 
 	}]);
