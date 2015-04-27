@@ -3,49 +3,51 @@
 		<a class="menu-nav" href="#menu" du-smooth-scroll du-scrollspy offset="10">Menu</a>
 		<a class="products-nav" href="#products" du-smooth-scroll du-scrollspy offset="10">Products</a>	
 	</div>
-	<div id="services-scroll-container" class="content-body">
-		
-		<div id="menu" class="content-section menu">
-			<div class="img"></div>
-			<div class="items">
+	<div class="scrollbar-wrapper">
+		<div id="services-scroll-container" class="content-body">
+			
+			<div id="menu" class="content-section menu">
+				<div class="img"></div>
+				<div class="items">
 
-				<!-- Start Category repeat -->
-				<div class="category-wrapper" ng-repeat="item in menu">
-					<div class="category-name {{item.category}} vertical"><span class="category">{{item.category}}</span></div>
-					<div class="item-wrapper {{item.category}} vertical">
-						<div class="item" ng-repeat="service in item.services">
-							<span class="name">{{service.name}}</span>
-							<span class="price">{{service.price}}</span>
-						</div>
-					</div>
-				</div>	
-				<!-- End Category repeat -->
-
-			</div>
-		</div>	
-
-		<div id="products" class="content-section products">			
-			<div class="items">
-
-				<!-- Start Category repeat -->
-				<div class="category-wrapper" ng-repeat="item in products">
-					<div class="category-name {{item.category}}"><span class="category">{{item.category}}</span></div>
-					<div class="item-wrapper {{item.category}}">
-						<div class="item" ng-repeat="product in item.stock">
-							<img class="product-img" src="{{product.images[0]}}" async="async"/>
-							<div class="product-info">
-								<span class="name">{{product.name}}</span>
-								<span class="price">{{product.price}}</span>
-								<span class="description">{{product.description}}</span>
+					<!-- Start Category repeat -->
+					<div class="category-wrapper" ng-repeat="item in menu">
+						<div class="category-name {{item.category}} vertical"><span class="category">{{item.category}}</span></div>
+						<div class="item-wrapper {{item.category}} vertical">
+							<div class="item" ng-repeat="service in item.services">
+								<span class="name">{{service.name}}</span>
+								<span class="price">{{service.price}}</span>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<!-- End Category repeat -->
+					</div>	
+					<!-- End Category repeat -->
 
+				</div>
+			</div>	
+
+			<div id="products" class="content-section products">			
+				<div class="items">
+
+					<!-- Start Category repeat -->
+					<div class="category-wrapper" ng-repeat="item in products">
+						<div class="category-name {{item.category}}"><span class="category">{{item.category}}</span></div>
+						<div class="item-wrapper {{item.category}}">
+							<div class="item" ng-repeat="product in item.stock">
+								<img class="product-img" src="{{product.images[0]}}" async="async"/>
+								<div class="product-info">
+									<span class="name">{{product.name}}</span>
+									<span class="price">{{product.price}}</span>
+									<span class="description">{{product.description}}</span>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<!-- End Category repeat -->
+
+				</div>
+				<div class="img"></div>
 			</div>
-			<div class="img"></div>
-		</div>
 
+		</div>
 	</div>
 </div>
