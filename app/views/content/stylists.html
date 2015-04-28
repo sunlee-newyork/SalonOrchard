@@ -13,19 +13,22 @@
 
 			<div ng-repeat="stylist in stylists" id="{{stylist.name}}" class="content-section {{stylist.name}}">
 
-				<!-- <div class="content-section-wrapper"> -->
-					<div class="content-section-header">
-						<img class="stylist-avatar" src="{{stylist.avatar}}" />
-						<div class="stylist-name-title-wrapper">
-							<span class="stylist-name">{{stylist.title}}</span>
-							<span class="stylist-title">{{stylist.name}}</span>
-						</div>
+				
+				<img class="stylist-avatar" src="{{stylist.avatar}}" />		
+
+				<div class="stylist-info">
+
+					<div class="stylist-info-header">
+						<span class="stylist-name">{{stylist.name}}</span>
+						<span class="stylist-title">{{stylist.title}}</span>
 					</div>
-					<div class="content-section-body">
+
+					<div class="stylist-info-body">
 						<p class="stylist-summary">{{stylist.summary}}</p>
 						<span ng-if="{{stylist.website}}" class="stylist-website">{{stylist.website}}</span>
 					</div>
-				<!-- </div> -->
+					
+				</div>
 				
 			</div>
 		</div>

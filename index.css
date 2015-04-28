@@ -266,22 +266,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .main .portal {
 	height: 100%;
-	padding: 30px 10px 100px;
+	padding: 30px 10px 60px;
 	font-weight: lighter;
 	font-size: 2em;
+}
+.main .portal.ng-enter,
+.main .portal.ng-leave-active {
+	opacity: 0;
+}
+.main .portal.ng-leave,
+.main .portal.ng-enter-active {
+	opacity: 1;
 }
 /* - end Main Page - */
 
 /* - Content - */
-
 .content {
 	height: 100%;
 }
 
-/* - Book Content - */
-.book {
+/* - About Content - */
+.about .google-map-wrapper {
+	float: right;
+	width: 300px;
 	height: 100%;
+	border-radius: 20px;
+	overflow: hidden;
 }
+.about iframe.google-map {
+	float: right;
+} 
+.about .content-header,
 .book .content-header {
 	position: absolute;
 	right: 0;
@@ -292,6 +307,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   border-bottom: 4px solid rgba(85,10,0,1);
 }
+.about .content-header h2,
 .book .content-header h2 {
 	display: inline-block;
   height: 100%;
@@ -300,11 +316,19 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 8px;
   background: rgba(130,68,0,1);
 }
+/* - end About Content - */
+
+/* - Book Content - */
+.book {
+	height: 100%;
+}
+
 .book .scrollbar-wrapper {
-	height: 110%;
+	height: 100%;
 }
 .book iframe {
   width: 980px;
+  height: 100%;
   border: none;
   overflow-x: hidden;
   border-radius: 30px;
@@ -393,7 +417,7 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 	width: 100%;
 	height: 150px;
-	margin: 0 0 5px 0;
+	margin: 0 0 20px 0;
 }
 .services .menu .items .category-name {
 	float: left;
@@ -522,30 +546,41 @@ h1, h2, h3, h4, h5, h6 {
 .stylists .content-body {
 	position: absolute;
 	float: left;
-	right: -14px;
+	right: -10px;
 	width: 100%;
 	height: 100%;
-	padding: 20px 0;
+	padding: 42px 0;
 	overflow-y: auto;
 }
 .stylists .content-body .content-section {
 	float: right;
 	width: 93%;
 	height: 100%;
-	margin: 0 0 20px 0;
+	margin: 0 10px 21px 0;
 	padding: 35px;
 	border-radius: 30px;
 	background: rgba(55,75,120,.8);
 }
-.stylists .content-body img {
+.stylists .content-body .content-section img.stylist-avatar {
 	float: left;
-	margin: 0 30px 0 0;
+	width: 30%;
+	height: 100%;
+	margin: 0 5% 0 0;
 	border-radius: 15px;
 }
-.stylists .content-body .content-section-header span {
-	display: inline-block;
+.stylists .content-body .content-section .stylist-info {
 	float: right;
-	margin: 0 0 5px 13px;
+	width: 65%;
+	height: 100%;
+}
+.stylist-info-header {
+	height: 18%;
+	margin: 0 0 5% 0;
+}
+.stylists .content-body .content-section .stylist-info .stylist-info-header span {
+	display: inline-block;
+	float: left;
+	height: 100%;
 	padding: 24px;
 	font-weight: 900;
 	font-size: 1.5em;
@@ -554,12 +589,20 @@ h1, h2, h3, h4, h5, h6 {
 	color: rgba(65,10,0,1);
 	background: #fff;
 	border-radius: 15px;
+	letter-spacing: 4px;
 }
-.stylists .content-body .content-section-body p {
+.stylists .content-body .content-section .stylist-info .stylist-info-header .stylist-name {
+	margin: 0 20px 0 0;
+}
+.stylists .content-body .content-section .stylist-info .stylist-info-body {
+	height: 77%;
+}
+.stylists .content-body .content-section .stylist-info .stylist-info-body p {
+	float: left;
 	color: #fff;
 	font-family: 'Moonlight';
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1.2;
 }
 /* - end Stylists Content - */
 
@@ -595,9 +638,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 2% 0 0;
 	opacity: 1;
 }
-.gallery .content-body .hero-image:hover {
-	opacity: .8;
-}
 .gallery .content-body .hero-image > img {
 	display: block;
 	max-width: 100%;
@@ -606,6 +646,9 @@ h1, h2, h3, h4, h5, h6 {
 	height: auto;
 	margin: 0 auto;
 	border-radius: 20px;
+}
+.gallery .content-body .hero-image:hover > img {
+	opacity: .8;
 }
 .gallery .content-body .hero-image .pinterest-button {
 	position: absolute;
@@ -643,7 +686,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .gallery .content-body .packery-sizer,
 .gallery .content-body .packery-container .packery-object {
-	width: 24.5%;
+	width: 25%;
 }
 .gallery .content-body .packery-container .packery-object {
   float: left;
@@ -669,6 +712,119 @@ h1, h2, h3, h4, h5, h6 {
 	-moz-transform:scale(1.5);
   -ms-transform:scale(1.5);
   transform:scale(1.5);
+}
+@media only screen and (max-width: 375px) {
+	.main {
+		width: 100%;
+	}
+	.main .container-bg {
+		padding: 25px;
+	}
+	.main .container-bg .container {
+		padding: 15px;
+	}
+	.main .header {
+		height: 40px;
+	}
+	.main .header .logo {
+		width: 40px;
+	}
+	.main .header .menubar-toggle {
+		width: 40px;
+		height: 40px;
+	}
+	.main .portal {
+		padding: 0;
+	}
+	.stylists {
+		position: relative;
+		width: 100%;
+		padding: 0;
+	}
+	.stylists .content-header {
+		font-size: 21px;
+	  width: 190px;
+	  margin: -42px auto 0;
+	  letter-spacing: 2px;
+	}
+	.stylists .content-navbar {
+		position: relative;
+		float: none;
+		width: 275px;
+		height: 38px;
+		top: 40px;
+		margin: 0 auto 40px auto;
+		padding: 0 6px;
+		border-right: none;
+		border-bottom: 4px solid rgba(65,10,0,1);
+	}
+	.stylists .content-navbar a {
+		float: left;
+		width: 70px;	  
+		height: 30px !important;
+		margin: 0 3px;
+	  line-height: 6px;
+	  font-size: 24px;
+	  letter-spacing: -2px;
+	}
+	.stylists .content-navbar a.mark-nav {
+		width: 80px;
+	
+		letter-spacing: 0px;
+}
+	.stylists .content-navbar a.arnulfo-nav {
+    width: 95px;		
+	}
+	.stylists .content-body {
+		right: initial;	
+		padding: 0;
+		margin: 0 0 20px 0;
+}
+	.stylists .content-body .content-section {
+		width: 100%;
+		margin: 0;
+		padding: 10px;
+		background: none;
+	}
+	.stylists .scrollbar-wrapper {
+		height: 467px;
+	}
+	.stylists .content-body .content-section .stylist-info .stylist-info-body p {
+		color: #000;
+		font-size: 14px;
+}
+	.stylists .content-body .content-section img.stylist-avatar {
+		display: none;
+		width: 40%;
+		height: auto;
+		margin: 0;
+	}
+	.stylists .content-body .content-section .stylist-info {
+		width: 100%;
+	
+		height: 100%;
+		padding: 0 10px;
+}
+	.stylists .content-body .content-section .stylist-info .stylist-info-header {
+		height: 60px;
+	
+		margin: 0;
+		padding: 0 20px;
+}
+	.stylists .content-body .content-section .stylist-info .stylist-info-header span {
+		height: 40px;
+		margin: 0 !important;
+		padding: 0;
+		line-height: 40px;
+		letter-spacing: 1px;
+	}
+	.stylists .content-body .content-section .stylist-info .stylist-info-header span.stylist-title {
+		float: right;
+	}
+	.stylists .content-body .content-section .stylist-info .stylist-info-body {
+		width: 100%;
+		height: 89%;
+	}
 }
 /* - end Gallery Content - */
 

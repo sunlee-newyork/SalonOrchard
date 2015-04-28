@@ -20,6 +20,10 @@ angular.module('app', [
 				templateUrl: '/app/views/main.html',
 				controller: 'mainController'
 			})
+			.when('/home/about', {
+				templateUrl: '/app/views/main.html?template=about',
+				controller: 'mainController'
+			})
 
 			.otherwise({
 				redirectTo: '/home'
@@ -30,7 +34,7 @@ angular.module('app', [
     snapRemoteProvider.globalOptions = { 
     	resistance: 0.8,
     	flickThreshold: 30,
-    	minPosition: -150,
+    	minPosition: -130,
     	disable: 'left', 
     	touchToDrag: false
     };

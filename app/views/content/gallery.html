@@ -6,12 +6,12 @@
 
 	<div class="content-body">
 		<div class="hero-image">
-			<img class="vertical" src="{{selected}}" />
+			<img class="vertical" src="{{selected}}" async />
 			<a class="pinterest-button vertical" href="//www.pinterest.com/pin/create/button/?url={{selected}}" data-pin-do="buttonPin" data-pin-config="beside" data-pin-color="red" data-pin-height="28"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png" /></a>
 		</div>
 		<packery ng-init="gallery" draggable="false">
 			<packery-object id="packery-container" ng-repeat="item in gallery" ng-click="toggleSize(item)">
-				<img src="{{item}}" />
+				<img src="{{item}}" async />
 			</packery-object>
 		</packery>
 	</div>
