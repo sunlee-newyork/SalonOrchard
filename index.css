@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 50px 0 0 15px;
 }
 .snap-drawer .nav {
-	font-size: 3em;
+	font-size: 3.5em;
 	color: #fff;
 	opacity: .7;
 }
@@ -549,7 +549,7 @@ h1, h2, h3, h4, h5, h6 {
 	right: -10px;
 	width: 100%;
 	height: 100%;
-	padding: 42px 0;
+	padding: 20px 0;
 	overflow-y: auto;
 }
 .stylists .content-body .content-section {
@@ -565,17 +565,17 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 	width: 30%;
 	height: 100%;
-	margin: 0 5% 0 0;
+	margin: 0 4% 0 0;
 	border-radius: 15px;
 }
 .stylists .content-body .content-section .stylist-info {
 	float: right;
-	width: 65%;
+	width: 66%;
 	height: 100%;
 }
 .stylist-info-header {
 	height: 18%;
-	margin: 0 0 5% 0;
+	margin: 0 0 6% 0;
 }
 .stylists .content-body .content-section .stylist-info .stylist-info-header span {
 	display: inline-block;
@@ -595,14 +595,14 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 20px 0 0;
 }
 .stylists .content-body .content-section .stylist-info .stylist-info-body {
-	height: 77%;
+	height: 75%;
 }
 .stylists .content-body .content-section .stylist-info .stylist-info-body p {
 	float: left;
 	color: #fff;
 	font-family: 'Moonlight';
-	font-size: 16px;
-	line-height: 1.2;
+	font-size: 18px;
+	line-height: 1.5;
 }
 /* - end Stylists Content - */
 
@@ -713,7 +713,13 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transform:scale(1.5);
   transform:scale(1.5);
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 415px) {
+	.background-img {
+		width: 100%;
+	}
+	.snap-drawer {
+		width: 50%;
+	}
 	.main {
 		width: 100%;
 	}
@@ -724,7 +730,7 @@ h1, h2, h3, h4, h5, h6 {
 		padding: 15px;
 	}
 	.main .header {
-		height: 40px;
+		height: 8%;
 	}
 	.main .header .logo {
 		width: 40px;
@@ -734,6 +740,7 @@ h1, h2, h3, h4, h5, h6 {
 		height: 40px;
 	}
 	.main .portal {
+		height: 92%;
 		padding: 0;
 	}
 	.stylists {
@@ -742,16 +749,16 @@ h1, h2, h3, h4, h5, h6 {
 		padding: 0;
 	}
 	.stylists .content-header {
-		font-size: 21px;
-	  width: 190px;
-	  margin: -42px auto 0;
-	  letter-spacing: 2px;
+		font-size: 20px;
+		width: 200px;
+		margin: -40px auto 0;
+		letter-spacing: 0;
 	}
 	.stylists .content-navbar {
 		position: relative;
 		float: none;
 		width: 275px;
-		height: 38px;
+		height: 35px;
 		top: 40px;
 		margin: 0 auto 40px auto;
 		padding: 0 6px;
@@ -761,16 +768,16 @@ h1, h2, h3, h4, h5, h6 {
 	.stylists .content-navbar a {
 		float: left;
 		width: 70px;	  
-		height: 30px !important;
+		height: 100% !important;
 		margin: 0 3px;
-	  line-height: 6px;
+		padding: 0;
+		line-height: 35px;
 	  font-size: 24px;
 	  letter-spacing: -2px;
 	}
 	.stylists .content-navbar a.mark-nav {
 		width: 80px;
 	
-		letter-spacing: 0px;
 }
 	.stylists .content-navbar a.arnulfo-nav {
     width: 95px;		
@@ -778,21 +785,21 @@ h1, h2, h3, h4, h5, h6 {
 	.stylists .content-body {
 		right: initial;	
 		padding: 0;
-		margin: 0 0 20px 0;
+		margin: 0 0 0 0;
 }
 	.stylists .content-body .content-section {
 		width: 100%;
 		margin: 0;
-		padding: 10px;
+		padding: 5px 10px 0;
 		background: none;
 	}
 	.stylists .scrollbar-wrapper {
-		height: 467px;
+		height: 83%;
 	}
 	.stylists .content-body .content-section .stylist-info .stylist-info-body p {
 		color: #000;
 		font-size: 14px;
-}
+	}
 	.stylists .content-body .content-section img.stylist-avatar {
 		display: none;
 		width: 40%;
@@ -801,22 +808,27 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	.stylists .content-body .content-section .stylist-info {
 		width: 100%;
-	
 		height: 100%;
 		padding: 0 10px;
-}
+	}
 	.stylists .content-body .content-section .stylist-info .stylist-info-header {
 		height: 60px;
-	
 		margin: 0;
-		padding: 0 20px;
-}
-	.stylists .content-body .content-section .stylist-info .stylist-info-header span {
+		/*padding: 0 20px;*/
+	}
+	.stylists .content-body .content-section .stylist-info .stylist-info-header .stylist-header-mobile {		
 		height: 40px;
 		margin: 0 !important;
-		padding: 0;
+		padding: 0 10px;
 		line-height: 40px;
-		letter-spacing: 1px;
+		text-align: right;
+		font-weight: 900;
+		color: #fff;
+		background: rgba(55,75,120,.8);
+		border-radius: 10px;
+	}
+	.stylists .content-body .content-section .stylist-info .stylist-info-header .stylist-divider {
+		padding: 0 3px 0 0;
 	}
 	.stylists .content-body .content-section .stylist-info .stylist-info-header span.stylist-title {
 		float: right;
@@ -824,6 +836,15 @@ h1, h2, h3, h4, h5, h6 {
 	.stylists .content-body .content-section .stylist-info .stylist-info-body {
 		width: 100%;
 		height: 89%;
+	}
+	.stylists .content-body .content-section .stylist-info .stylist-info-body p {
+		font-size: 15px;
+		line-height: 1.2;
+		text-align: right;
+	}
+	.stylists .content-body .content-section .stylist-info .stylist-info-body .stylist-website {
+		float: right;
+		color: rgba(65,10,0,1);
 	}
 }
 /* - end Gallery Content - */

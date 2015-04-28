@@ -31,11 +31,23 @@ angular.module('app', [
 	}])
 
 	.config(function (snapRemoteProvider) {
-    snapRemoteProvider.globalOptions = { 
-    	resistance: 0.8,
-    	flickThreshold: 30,
-    	minPosition: -130,
-    	disable: 'left', 
-    	touchToDrag: false
-    };
+
+		if (window.innerWidth > 415) {
+			snapRemoteProvider.globalOptions = { 
+	    	resistance: 0.8,
+	    	flickThreshold: 30,
+	    	minPosition: -130,
+	    	disable: 'left', 
+	    	touchToDrag: false
+	    };	
+		} else {
+			snapRemoteProvider.globalOptions = { 
+	    	resistance: 0.8,
+	    	flickThreshold: 30,
+	    	minPosition: -200,
+	    	disable: 'left', 
+	    	touchToDrag: false
+	    };
+		}
+    
   });

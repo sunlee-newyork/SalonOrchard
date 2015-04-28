@@ -1,11 +1,19 @@
 <div class="content stylists" ng-controller="stylistsController">
 	<div class="content-header"><h1>Meet The Stylists</h1></div>
-	<div class="content-navbar vertical" du-scroll-container="stylists-scroll-container">
+	<div ng-if="windowWidth > 415" class="content-navbar vertical" du-scroll-container="stylists-scroll-container">
 		<a class="chie-nav" href="#chie" du-smooth-scroll du-scrollspy offset="20">C h i e
 		</a>
 		<a class="mark-nav" href="#mark" du-smooth-scroll du-scrollspy offset="20">M a r k
 		</a>	
 		<a class="arnulfo-nav" href="#arnulfo" du-smooth-scroll du-scrollspy offset="20">A r n u l f o
+		</a>	
+	</div>
+	<div ng-if="windowWidth < 415" class="content-navbar vertical" du-scroll-container="stylists-scroll-container">
+		<a class="chie-nav" href="#chie" du-smooth-scroll du-scrollspy>C h i e
+		</a>
+		<a class="mark-nav" href="#mark" du-smooth-scroll du-scrollspy>M a r k
+		</a>	
+		<a class="arnulfo-nav" href="#arnulfo" du-smooth-scroll du-scrollspy>A r n u l f o
 		</a>	
 	</div>
 	<div class="scrollbar-wrapper">
@@ -14,18 +22,25 @@
 			<div ng-repeat="stylist in stylists" id="{{stylist.name}}" class="content-section {{stylist.name}}">
 
 				
-				<img class="stylist-avatar" src="{{stylist.avatar}}" />		
+				<img ng-if="stylist.avatar" class="stylist-avatar" src="{{stylist.avatar}}" />		
 
 				<div class="stylist-info">
 
-					<div class="stylist-info-header">
-						<span class="stylist-name">{{stylist.name}}</span>
-						<span class="stylist-title">{{stylist.title}}</span>
+					<div ng-if="windowWidth > 415" class="stylist-info-header">
+						<span class="stylist-name">{{stylist.name}}</span>				<span class="stylist-title">{{stylist.title}}</span>
+					</div>
+
+					<div ng-if="windowWidth < 415" class="stylist-info-header">
+						<p class="stylist-header-mobile">
+							{{stylist.name}}
+							<i class="stylist-divider">//</i>
+							{{stylist.title}}
+						</p>
 					</div>
 
 					<div class="stylist-info-body">
 						<p class="stylist-summary">{{stylist.summary}}</p>
-						<span ng-if="{{stylist.website}}" class="stylist-website">{{stylist.website}}</span>
+						<span ng-if="stylist.website" class="stylist-website">{{stylist.website}}</span>
 					</div>
 					
 				</div>

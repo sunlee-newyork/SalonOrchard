@@ -1,15 +1,22 @@
 'use strict';
 
 angular.module('app')
-	.controller('mainController', ['$scope', '$location',
-	function ($scope, $location) {
+	.controller('mainController', ['$scope', '$location', '$window',
+	function ($scope, $location, $window) {
 
 		// $scope.goHome = function () {
 		// 	console.log('goHome triggered');
 		// 	$location.path("/home");
 		// }
 
-		$scope.templateParam = $location
+		// $scope.templateParam = $location
+
+		$scope.$watch(function () {
+			return $window.innerWidth;
+		}, function (value) {
+			console.log(value);
+			$scope.windowWidth = value;
+		});
 
 		$scope.opts = {
 			disable: 'left'
