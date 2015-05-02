@@ -6,13 +6,24 @@ angular.module('app')
 
 		$scope.selected = '/assets/imgs/snapshots/20150326_200400.jpg';
 
-		$scope.toggleSize = function (item) {
+		$scope.selectHero = function (item) {
+			if (window.innerWidth < 415) {
+				$scope.mobileClicked = true;
+			}
 			$scope.selected = item;
 		}
 
-		// $scope.isSelected = function (item) {
-		// 	return $scope.selected === item;
-		// }
+		$scope.closeLightbox = function () {
+			$scope.mobileClicked = false;
+		}
+
+		angular.element(document).ready(function () {
+        	var pckry = new Packery('#packery');
+			pckry.layout();
+    	});
+		
+
+		// document.getElementById('packery').packery();
 
 		$scope.gallery = [
 			'/assets/imgs/stock-generic/beef-stock.jpg',

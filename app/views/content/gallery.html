@@ -9,11 +9,21 @@
 			<img class="vertical" src="{{selected}}" async />
 			<a class="pinterest-button vertical" href="//www.pinterest.com/pin/create/button/?url={{selected}}" data-pin-do="buttonPin" data-pin-config="beside" data-pin-color="red" data-pin-height="28"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png" /></a>
 		</div>
-		<packery ng-init="gallery" draggable="false">
-			<packery-object id="packery-container" ng-repeat="item in gallery" ng-click="toggleSize(item)">
-				<img src="{{item}}" async />
+		<packery id="packery" ng-init="gallery" draggable="false">
+			<packery-object ng-repeat="item in gallery" ng-click="selectHero(item)">
+				<img src="{{item}}" />
 			</packery-object>
 		</packery>
 	</div>
+
+	<!-- Mobile Image Lightbox -->
+	<div class="lightbox" ng-show="mobileClicked">
+		<div class="close-button" ng-click="closeLightbox()">x</div>
+		<div class="image-wrapper">
+			<img class="vertical" src="{{selected}}" async />
+			<!-- add Pinterest -->
+		</div>
+	</div>
+	<!-- end Mobile Image Lightbox -->
 
 </div>

@@ -31,6 +31,6 @@ angular.module('app')
 			{ name: 'social'  , url: 'app/views/content/social.html' }			
 		]
 
-		$scope.template = $scope.templates[3];
+		$scope.template = $scope.templates[4];
 
 	}]);
