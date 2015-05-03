@@ -31,15 +31,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* - FONTS - */
-@font-face { font-family: 'SUNN'; src: url('/assets/fonts/SUNN.otf') format('opentype'); }
-@font-face { font-family: 'Jaapokki'; src: url('/assets/fonts/Jaapokki.otf') format('opentype'); }
-@font-face { font-family: 'Billy'; src: url('/assets/fonts/billy.ttf') format('truetype'); }
-@font-face { font-family: 'Chomp'; src: url('/assets/fonts/Chomp.ttf') format('truetype'); }
-@font-face { font-family: 'MoonLight'; src: url('/assets/fonts/Moon/MoonLight.otf') format('opentype'); }
-@font-face { font-family: 'MoonBold'; src: url('/assets/fonts/Moon/MoonBold.otf') format('opentype'); }
-@font-face { font-family: 'Simplifica'; src: url('/assets/fonts/Simplifica.ttf') format('truetype'); }
-@font-face { font-family: 'Panton'; src: url('/assets/fonts/Panton/PantonLightCaps.otf') format('opentype'); }
-@font-face { font-family: 'Asgalt'; src: url('/assets/fonts/Asgalt.ttf') format('truetype'); }
+@font-face { font-family: 'SUNN'; src: url('../assets/fonts/SUNN.otf') format('opentype'); }
+@font-face { font-family: 'Jaapokki'; src: url('../assets/fonts/Jaapokki.otf') format('opentype'); }
+@font-face { font-family: 'Billy'; src: url('../assets/fonts/billy.ttf') format('truetype'); }
+@font-face { font-family: 'Chomp'; src: url('../assets/fonts/Chomp.ttf') format('truetype'); }
+@font-face { font-family: 'MoonLight'; src: url('../assets/fonts/Moon/MoonLight.otf') format('opentype'); }
+@font-face { font-family: 'MoonBold'; src: url('../assets/fonts/Moon/MoonBold.otf') format('opentype'); }
+@font-face { font-family: 'Simplifica'; src: url('../assets/fonts/Simplifica.ttf') format('truetype'); }
+@font-face { font-family: 'Panton'; src: url('../assets/fonts/Panton/PantonLightCaps.otf') format('opentype'); }
+@font-face { font-family: 'Asgalt'; src: url('../assets/fonts/Asgalt.ttf') format('truetype'); }
 /* - end FONTS - */
 
 /* - ANIMATIONS - */
@@ -135,10 +135,10 @@ h1, h2, h3, h4, h5, h6 {
 	width: 75%;
 	height: 300px;
 }
-.face-1 { background: url(/assets/imgs/face-1.jpg); }
-.face-2 { background: url(/assets/imgs/face-2.jpg); }
-.face-3 { background: url(/assets/imgs/face-3.jpg); }
-.face-4 { background: url(/assets/imgs/face-4.jpg); }
+.face-1 { background: url(../assets/imgs/face-1.jpg); }
+.face-2 { background: url(../assets/imgs/face-2.jpg); }
+.face-3 { background: url(../assets/imgs/face-3.jpg); }
+.face-4 { background: url(../assets/imgs/face-4.jpg); }
 .intro .container .face-1,
 .intro .container .face-2,
 .intro .container .face-3,
@@ -230,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 	width: 75px;
 	height: 100%;
-	background: url(/assets/imgs/logo-green.png) no-repeat center center;
+	background: url(../assets/imgs/logo-green.png) no-repeat center center;
 	background-size: contain;
 	/* opacity: .8; */
 }
@@ -330,7 +330,7 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	padding: 40px 0;
 	border-radius: 20px;
-	background: url('/assets/imgs/wood.jpg') no-repeat center;
+	background: url('../assets/imgs/wood.jpg') no-repeat center;
 	background-size: cover;
 	overflow: hidden;
 }
@@ -518,7 +518,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .book .scrollbar-wrapper {
 	height: 100%;
-	background: url(/assets/imgs/wood.jpg) no-repeat center;
+	background: url(../assets/imgs/wood.jpg) no-repeat center;
 	background-size: cover;
 	padding: 15px;
 	border-radius: 30px;
@@ -609,7 +609,7 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 	width: 35%;
 	height: 100%;
-	background: url('/assets/imgs/snapshots/20150326_200249.jpg');
+	background: url('../assets/imgs/snapshots/20150326_200249.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
