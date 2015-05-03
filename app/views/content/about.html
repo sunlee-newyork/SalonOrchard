@@ -4,35 +4,33 @@
 		<h2>Salon Orchard</h2>
 	</div>
 
-	<div class="container">
+	<div class="info">
 
-		<div class="info">
+		<h2 class="address">189 Orchard Street<br/>New York NY 10002</h2>
 
-			<h2 class="address">189 Orchard Street<br/>New York NY 10002</h2>
+		<div class="bottom-wrapper">
 
-			<div class="bottom-wrapper">
-
-				<div class="contact">				
-					<span>Call Us @</span>
-					<a class="phone" href="tel:+12127800900">(212)<br/>780<br/>0900</a>
-				</div>
-
-				<div class="google-map-wrapper">
-					<iframe
-						class="google-map"
-					  width="100%"
-					  height="100%"
-					  frameborder="0" style="border:0"
-					  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB430NqQSXPHmt85jRNGfrrgkPj39azJ3E
-					    &zoom=16&q=Salon+Orchard+NYC,New+York+NY" async>
-					</iframe>
-				</div>
-
-				<div class="hours">
-					<p class="date" ng-repeat="date in schedule"><span class="day">{{date.day}}</span><span class="time">{{date.time}}</span></p>
-				</div>	
-
+			<div class="contact">				
+				<!-- <span>Call Us @</span> -->
+				<a class="phone" href="tel:+12127800900">(212)<br/>780<br/>0900</a>
 			</div>
+
+			<div class="google-map-wrapper">
+				<iframe
+					class="google-map"
+				  width="100%"
+				  height="100%"
+				  frameborder="0" style="border:0"
+				  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB430NqQSXPHmt85jRNGfrrgkPj39azJ3E
+				    &zoom=16&q=Salon+Orchard+NYC,New+York+NY" async>
+				</iframe>
+			</div>
+
+			<div class="hours">
+				<p class="date" ng-repeat="date in schedule"><span class="day">{{date.day}}</span><span class="time">{{date.time}}</span></p>
+			</div>	
+
 		</div>
 	</div>
+	
 </div>
