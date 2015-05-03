@@ -1,8 +1,15 @@
 'use strict';
 
 angular.module('app')
-	.controller('aboutController', ['$scope',
-	function ($scope) {
+	.controller('aboutController', ['$scope', '$window',
+	function ($scope, $window) {
+
+		$scope.$watch(function () {
+			return $window.innerWidth;
+		}, function (value) {
+			console.log(value);
+			$scope.windowWidth = value;
+		});
 
 		$scope.schedule = [
 			{day: 'Monday', time: 'CLOSED'},

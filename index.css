@@ -324,24 +324,19 @@ h1, h2, h3, h4, h5, h6 {
 /* - About Content - */
 .about .container {
 	padding: 0;
-	/* overflow: auto; */
 }
 .about .info {
-	/* float: left; */
 	width: 100%;
 	height: 100%;
-	/* margin: 0 0 10px 0; */
 	padding: 40px 0;
 	border-radius: 20px;
 	background: url('/assets/imgs/wood.jpg') no-repeat center;
 	background-size: cover;
 	overflow: hidden;
-	/* box-shadow: inset 0 0 63px #000; */
 }
 .about .info .address {
 	width: auto;
 	height: 24%;
-	/* margin: 0 auto 40px; */
 	padding: 10px 10px 7px;
 	line-height: 40px;
 	background: rgba(77, 44, 0, .8);
@@ -356,10 +351,12 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 40px 40px 0;
 	height: 76%;
 }
+.about .info .contact-wrapper {
+	height: 100%;
+}
 .about .info .contact {
 	float: left;
 	width: 20%;
-	/* margin: 50px 0; */
 	padding: 50px 20px 0 0;
 	text-align: center;
 }
@@ -378,10 +375,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1.5em;
 }
 .about .google-map-wrapper {
+	position: relative;
 	float: left;
 	width: 42%;
 	height: 100%;
-	/* padding: 0 20px; */
 	border-radius: 20px;
 	overflow: hidden;
 }
@@ -389,12 +386,9 @@ h1, h2, h3, h4, h5, h6 {
 	float: right;
 } 
 .about .info .hours {
-    width: 38%;
-    float: right;
-
-    padding: 15px 0 0 40px;
-    /* border-left: 1px solid #fff; */
-    /* border-right: 1px solid #fff; */
+  width: 38%;
+  float: right;
+  padding: 15px 0 0 40px;
 }
 .about .info .hours .date {
   display: block;
@@ -402,9 +396,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .about .info .hours .date span {
-    color: #fff;
-	
-    font-family: 'Moonlight';
+  color: #fff;
+  font-family: 'Moonlight';
 }
 .about .info .hours .date .time {
 	display: inline-block;
@@ -439,19 +432,100 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: 8px;
 	background: rgba(130,68,0,1);
 }
+@media only screen and (max-width: 415px) {
+	.about .info {
+    position: absolute;
+    bottom: 0;	
+    height: 97%;
+    padding: 30px 0;
+	}
+	.about .info .address {
+    height: 65px;
+		font-size: 0.6em;
+    line-height: 25px;
+    letter-spacing: 3px;
+	}
+	.about .info .bottom-wrapper {
+    padding: 20px 20px 0;
+		height: 80%;
+    overflow: auto;
+	}
+	.about .contact-wrapper {
+		height: 100%;
+		margin-bottom: 10px;
+	}
+	.about .info .contact {
+    width: 100%;
+		padding: 0;
+	}
+	.about .info .contact .phone {
+    font-size: 1em;	
+	}
+	.about .info .hours {
+    float: left;
+    width: 100%;	
+    padding: 10px 10px 0;
+	}
+	.about .info .hours .date {
+    height: 30px;		
+	}
+	.about .info .hours .date .day {
+    font-size: .6em;	
+	}
+	.about .info .hours .date .time {
+    font-size: .4em;		
+	}
+	.about .info .google-map-wrapper {
+		width: 100%;
+		height: 100%;
+	}
+	.about .info .map-scroll {
+    position: absolute;
+    bottom: 0;
+    float: left;
+    width: 100%;
+		
+    height: 40px;
+    padding: 10px;
+	}
+	.about .info .map-scroll a {
+		display: block;
+		width: 0; 
+		height: 0; 
+		margin: 0 auto;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;		
+	}
+	.about .info .map-scroll a.active {
+		display: none;
+	}
+	.about .info .map-scroll .arrow-down {
+		border-top: 20px solid rgba(135,10,0,1);
+	}
+	.about .info .map-scroll .arrow-up {	
+		border-bottom: 20px solid rgba(135,10,0,1);
+	}
+
+}
 /* - end About Content - */
 
 /* - Book Content - */
 .book {
 	height: 100%;
 }
-
+.book .content-body {
+	height: 100%;
+}
 .book .scrollbar-wrapper {
 	height: 100%;
+	background: url(/assets/imgs/wood.jpg) no-repeat center;
+	background-size: cover;
+	padding: 15px;
+	border-radius: 30px;
 }
 .book iframe {
 	width: 111%;
-	height: 106%;
+	height: 111%;
 	border: none;
 	overflow-x: hidden;
 	border-radius: 30px;
@@ -462,6 +536,16 @@ h1, h2, h3, h4, h5, h6 {
 	-o-transform-origin: 0 0;
 	-webkit-transform: scale(.9);
 	-webkit-transform-origin: 0 0;
+}
+@media only screen and (max-width: 415px) {
+	.book .content-body {
+		position: absolute;
+		bottom: 0;
+		height: 97%;
+	}
+	.book .scrollbar-wrapper {
+		padding: 25px;
+	}
 }
 /* - end Book Content - */
 
@@ -682,13 +766,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 10px 21px 0;
 	padding: 35px;
 	border-radius: 30px;
-	/* border-top-right-radius: 30px; */
-	/* border-bottom-left-radius: 30px; */
 	background: rgba(55,75,120,.8);
 }
 .stylists .content-body .content-section img.stylist-avatar {
 	float: left;
-	/* width: 30%; */
 	height: 100%;
 	margin: 0 4% 0 0;
 	border-radius: 15px;
@@ -738,12 +819,6 @@ h1, h2, h3, h4, h5, h6 {
 		position: relative;
 		width: 100%;
 		padding: 0;
-	}
-	.stylists .content-header {
-		font-size: 20px;
-		width: 200px;
-		margin: -38px auto 0;
-		letter-spacing: 0;
 	}
 	.stylists .content-navbar {
 		position: relative;
@@ -923,7 +998,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .gallery .content-body .packery-container .packery-object {
 	float: left;
-	/*margin-bottom: 3px;*/
 	overflow: hidden;
 	-webkit-transition: width 0.4s ease-in-out;
 	-moz-transition: width 0.4s ease-in-out;
@@ -947,14 +1021,6 @@ h1, h2, h3, h4, h5, h6 {
 	transform:scale(1.5);
 }
 @media only screen and (max-width: 415px) {
-	.gallery .content-header {
-		margin: -50px auto 20px;
-		height: 50px;
-		width: 160px;
-	}
-	.gallery .content-header h2 {
-		font-size: 1.3em;
-	}
 	.gallery .content-body .hero-image {
 		display: none;
 	}
@@ -1019,6 +1085,29 @@ h1, h2, h3, h4, h5, h6 {
 		width: 100%;
 		height: auto;
 		border-radius: 20px;
+	}
+}
+@media only screen and (max-width: 415px) {
+	.about .content-header,
+	.book .content-header,
+	.gallery .content-header,
+	.stylists .content-header {
+		font-size: 20px;
+		width: 200px;
+		height: 40px;
+		margin: -45px auto 0;
+		letter-spacing: 0;	
+		border-bottom: 0;
+	}
+	.about .content-header h2,
+	.book .content-header h2,
+	.gallery .content-header h2
+	.stylists .content-header h2 {
+    color: rgba(85,10,0,1);
+    background: none;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+    padding: 0;
 	}
 }
 /* - end Gallery Content - */
