@@ -13,15 +13,15 @@ angular.module('app', [
 		$locationProvider.html5Mode(true);
 		$routeProvider
 			.when('/', {
-				templateUrl: '/app/views/intro.html',
+				templateUrl: '/SalonOrchard/app/views/intro.html',
 				controller: 'introController'
 			})
 			.when('/home', {
-				templateUrl: '/app/views/main.html',
+				templateUrl: '/SalonOrchard/app/views/main.html',
 				controller: 'mainController'
 			})
 			.when('/home/about', {
-				templateUrl: '/app/views/main.html?template=about',
+				templateUrl: '/SalonOrchard/app/views/main.html?template=about',
 				controller: 'mainController'
 			})
 

@@ -23,12 +23,12 @@ angular.module('app')
 		};
 
 		$scope.templates = [
-			{ name: 'about'   , url: 'app/views/content/about.html' },
-			{ name: 'book'    , url: 'app/views/content/book.html' },
-			{ name: 'services', url: 'app/views/content/services.html' },
-			{ name: 'stylists', url: 'app/views/content/stylists.html' },
-			{ name: 'gallery' , url: 'app/views/content/gallery.html' },
-			{ name: 'social'  , url: 'app/views/content/social.html' }			
+			{ name: 'about'   , url: '/SalonOrchardapp/views/content/about.html' },
+			{ name: 'book'    , url: '/SalonOrchardapp/views/content/book.html' },
+			{ name: 'services', url: '/SalonOrchardapp/views/content/services.html' },
+			{ name: 'stylists', url: '/SalonOrchardapp/views/content/stylists.html' },
+			{ name: 'gallery' , url: '/SalonOrchardapp/views/content/gallery.html' },
+			{ name: 'social'  , url: '/SalonOrchardapp/views/content/social.html' }			
 		]
 
 		$scope.template = $scope.templates[0];
