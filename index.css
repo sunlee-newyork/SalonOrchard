@@ -135,10 +135,10 @@ h1, h2, h3, h4, h5, h6 {
 	width: 75%;
 	height: 300px;
 }
-.face-1 { background: url(../assets/imgs/face-1.jpg); }
-.face-2 { background: url(../assets/imgs/face-2.jpg); }
-.face-3 { background: url(../assets/imgs/face-3.jpg); }
-.face-4 { background: url(../assets/imgs/face-4.jpg); }
+.face-1 { background: url(/SalonOrchard/assets/imgs/face-1.jpg); }
+.face-2 { background: url(/SalonOrchard/assets/imgs/face-2.jpg); }
+.face-3 { background: url(/SalonOrchard/assets/imgs/face-3.jpg); }
+.face-4 { background: url(/SalonOrchard/assets/imgs/face-4.jpg); }
 .intro .container .face-1,
 .intro .container .face-2,
 .intro .container .face-3,
@@ -230,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 	width: 75px;
 	height: 100%;
-	background: url(../assets/imgs/logo-green.png) no-repeat center center;
+	background: url(/SalonOrchard/assets/imgs/logo-green.png) no-repeat center center;
 	background-size: contain;
 	/* opacity: .8; */
 }
@@ -518,7 +518,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .book .scrollbar-wrapper {
 	height: 100%;
-	background: url(../assets/imgs/wood.jpg) no-repeat center;
+	background: url(/SalonOrchard/assets/imgs/wood.jpg) no-repeat center;
 	background-size: cover;
 	padding: 15px;
 	border-radius: 30px;
