@@ -6,7 +6,8 @@
 
 	<div class="info">
 
-		<h2 class="address">189 Orchard Street<br/>New York NY 10002</h2>
+		<h2 ng-if="windowWidth > 415" class="address">189 Orchard Street<br/>New York NY 10002</h2>
+		<a ng-if="windowWidth < 415" href="//maps.google.com/?q=189%20Orchard%20ST%20New%20York,%20NY%2010002" class="address">189 Orchard Street<br/>New York NY 10002</a>
 
 		<div id="bottom-wrapper" class="bottom-wrapper">
 
