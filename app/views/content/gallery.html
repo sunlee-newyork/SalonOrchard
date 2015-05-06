@@ -11,7 +11,7 @@
 		</div>
 		<packery id="packery" ng-init="gallery" draggable="false">
 			<packery-object ng-repeat="item in gallery" ng-click="selectHero(item)">
-				<img src="{{item}}" />
+				<img src="{{item}}" async />
 			</packery-object>
 		</packery>
 	</div>

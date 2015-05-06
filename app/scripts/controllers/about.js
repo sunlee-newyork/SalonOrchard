@@ -7,7 +7,6 @@ angular.module('app')
 		$scope.$watch(function () {
 			return $window.innerWidth;
 		}, function (value) {
-			console.log(value);
 			$scope.windowWidth = value;
 		});
 

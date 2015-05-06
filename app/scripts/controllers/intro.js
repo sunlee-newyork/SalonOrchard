@@ -4,7 +4,7 @@ angular.module('app')
 	.controller('introController', ['$scope', '$interval', '$location', function ($scope, $interval, $location) {
 
 		var redirect = function() {
-	    $location.path("/home");
+	    $location.path("/home/about");
 		}    
 
 		$interval(function() {

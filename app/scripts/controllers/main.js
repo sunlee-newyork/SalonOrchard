@@ -1,36 +1,55 @@
 'use strict';
 
 angular.module('app')
-	.controller('mainController', ['$scope', '$location', '$window',
-	function ($scope, $location, $window) {
-
-		// $scope.goHome = function () {
-		// 	console.log('goHome triggered');
-		// 	$location.path("/home");
-		// }
-
-		// $scope.templateParam = $location
+	.controller('mainController', ['$scope', '$location', '$routeParams', '$window',
+	function ($scope, $location, $routeParams, $window) {
 
 		$scope.$watch(function () {
 			return $window.innerWidth;
 		}, function (value) {
-			console.log(value);
 			$scope.windowWidth = value;
 		});
+
+		$scope.changeTemplate = function(tmp) {
+			$scope.template = tmp.url;
+			$location.path('/home/' + tmp.name, false);
+		}
 
 		$scope.opts = {
 			disable: 'left'
 		};
 
-		$scope.templates = [
-			{ name: 'about'   , url: 'app/views/content/about.html' },
-			{ name: 'book'    , url: 'app/views/content/book.html' },
-			{ name: 'services', url: 'app/views/content/services.html' },
-			{ name: 'stylists', url: 'app/views/content/stylists.html' },
-			{ name: 'gallery' , url: 'app/views/content/gallery.html' },
-			{ name: 'social'  , url: 'app/views/content/social.html' }			
-		]
+		$scope.templates = {
+			about: {
+				name: 'about',
+				url: 'app/views/content/about.html'
+			},
+			book: {
+				name: 'book',
+				url: 'app/views/content/book.html'
+			},
+			services: {
+				name: 'services',
+				url: 'app/views/content/services.html'
+			},
+			stylists: {
+				name: 'stylists',
+				url: 'app/views/content/stylists.html'
+			},
+			gallery: {
+				name: 'gallery',
+				url: 'app/views/content/gallery.html'
+			},
+			social: {
+				name: 'social',
+				url: 'app/views/content/social.html'
+			}
+		}
 
-		$scope.template = $scope.templates[0];
+		if ($routeParams.template) {
+			$scope.template = $scope.templates[$routeParams.template].url;
+		} else {
+			$scope.template = 'app/views/content/about.html';
+		}
 
 	}]);

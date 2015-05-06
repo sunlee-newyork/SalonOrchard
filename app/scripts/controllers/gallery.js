@@ -17,10 +17,10 @@ angular.module('app')
 			$scope.mobileClicked = false;
 		}
 
-		angular.element(document).ready(function () {
-        	var pckry = new Packery('#packery');
-			pckry.layout();
-    	});
+		// angular.element(document).ready(function () {
+  //       	var pckry = new Packery(angular.element(document.querySelector('#packery')));
+		// 	pckry.layout();
+  //   	});
 		
 
 		// document.getElementById('packery').packery();
