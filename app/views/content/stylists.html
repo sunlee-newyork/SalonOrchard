@@ -22,7 +22,7 @@
 			<div ng-repeat="stylist in stylists" id="{{stylist.name}}" class="content-section {{stylist.name}}">
 
 				
-				<img ng-if="stylist.avatar" class="stylist-avatar" src="{{stylist.avatar}}" />		
+				<img ng-if="stylist.avatar && windowWidth > 415" class="stylist-avatar" src="{{stylist.avatar}}" />		
 
 				<div class="stylist-info">
 

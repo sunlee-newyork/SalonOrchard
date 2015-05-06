@@ -33,22 +33,38 @@ angular.module('app', [
 
 	.config(function (snapRemoteProvider) {
 
-		if (window.innerWidth > 415) {
+		if (window.innerWidth > 1200) {
 			snapRemoteProvider.globalOptions = { 
-		    	resistance: 0.8,
-		    	flickThreshold: 30,
-		    	minPosition: -130,
-		    	disable: 'left', 
-		    	touchToDrag: false
-		    };	
+	    	resistance: 0.8,
+	    	flickThreshold: 30,
+	    	minPosition: -160,
+	    	disable: 'left', 
+	    	touchToDrag: false
+	    };
+		} else if (window.innerWidth > 1110 && window.innerWidth <= 1200) {
+			snapRemoteProvider.globalOptions = { 
+	    	resistance: 0.8,
+	    	flickThreshold: 30,
+	    	minPosition: -220,
+	    	disable: 'left', 
+	    	touchToDrag: false
+	    };
+		} else if (window.innerWidth > 415 && window.innerWidth <= 1110) {
+			snapRemoteProvider.globalOptions = { 
+	    	resistance: 0.8,
+	    	flickThreshold: 30,
+	    	minPosition: -230,
+	    	disable: 'left', 
+	    	touchToDrag: false
+	    };
 		} else {
 			snapRemoteProvider.globalOptions = { 
-		    	resistance: 0.8,
-		    	flickThreshold: 30,
-		    	minPosition: -200,
-		    	disable: 'left', 
-		    	touchToDrag: false
-		    };
+	    	resistance: 0.8,
+	    	flickThreshold: 30,
+	    	minPosition: -200,
+	    	disable: 'left', 
+	    	touchToDrag: false
+	    };
 		}
     
 	})
