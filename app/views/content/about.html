@@ -1,42 +1,42 @@
 <div class="content about" ng-controller="aboutController">
 
-	<div class="content-header">
+	<!-- <div class="content-header">
 		<h2>Salon Orchard</h2>
-	</div>
+	</div> -->
 
-	<div class="info">
+	<div class="about-body">
 
-		<h2 ng-if="windowWidth > 415" class="address">189 Orchard Street<br/>New York NY 10002</h2>
-		<a ng-if="windowWidth < 415" href="//maps.google.com/?q=189%20Orchard%20ST%20New%20York,%20NY%2010002" class="address">189 Orchard Street<br/>New York NY 10002</a>
+		<h2 ng-if="windowWidth > 415" class="about-body-top">189 Orchard Street New York, NY 10002</h2>
+		
+		<a ng-if="windowWidth < 415" href="//maps.google.com/?q=189%20Orchard%20ST%20New%20York,%20NY%2010002" class="about-body-top">189 Orchard Street<br/>New York NY 10002</a>
 
-		<div id="bottom-wrapper" class="bottom-wrapper">
+		<!-- <div id="about-nav-wrapper" class="about-nav-wrapper"> -->
 
-			<div id="contact" class="contact-wrapper">
+		<div class="about-body-bottom">
+			<div id="contact-hours" class="contact-wrapper">
+
+				<div class="hours">
+					<div class="hours-letters-wrapper">
+						<span>H</span><span>O</span><span>U</span><span>R</span><span>S</span>
+					</div>
+					<div class="date-wrapper">
+						<p class="date" ng-repeat="date in schedule"><span class="day">{{date.day}}</span><span class="time">{{date.time}}</span></p>
+					</div>
+				</div>
 
 				<div class="contact">		
 					<span ng-if="windowWidth > 415">Call us!</span>
-					<a ng-if="windowWidth > 415" class="phone" href="tel:+12127800900">(212)<br/>780<br/>0900</a>
-					<a ng-if="windowWidth < 415" class="phone" href="tel:+12127800900">(212) 780-0900</a>
+					<!-- <a ng-if="windowWidth > 415" class="phone" href="tel:+12127800900">(212)<br/>780<br/>0900</a> -->
+					<!-- <a ng-if="windowWidth < 415" class="phone" href="tel:+12127800900">(212) 780-0900</a> -->
+					<a class="phone" href="tel:+12127800900">(212) 780-0900</a>
 				</div>
 
-				<div ng-if="windowWidth > 415" class="google-map-wrapper">
-					<iframe
-						class="google-map"
-					  width="100%"
-					  height="100%"
-					  frameborder="0" style="border:0"
-					  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB430NqQSXPHmt85jRNGfrrgkPj39azJ3E
-					    &zoom=16&q=Salon+Orchard+NYC,New+York+NY" async>
-					</iframe>
-				</div>
-
-				<div class="hours">
-					<p class="date" ng-repeat="date in schedule"><span class="day">{{date.day}}</span><span class="time">{{date.time}}</span></p>
-				</div>
+				
 
 			</div>
 
-			<div id="map" ng-if="windowWidth < 415" class="google-map-wrapper">
+			<!-- GOOGLE MAPS [mobile] -->
+			<div id="map" class="google-map-wrapper">
 				<iframe
 					class="google-map"
 				  width="100%"
@@ -46,11 +46,13 @@
 				    &zoom=16&q=Salon+Orchard+NYC,New+York+NY" async>
 				</iframe>
 			</div>			
-
+			<!-- end GOOGLE MAPS [mobile] -->
 		</div>
-		<div ng-if="windowWidth < 415" class="map-scroll" du-scroll-container="bottom-wrapper">
+
+		<!-- </div> -->
+		<div ng-if="windowWidth < 415" class="map-scroll" du-scroll-container="about-nav-wrapper">
 			<a href="#map" class="arrow-down" du-smooth-scroll du-scrollspy offset="20"></a>
-			<a href="#contact" class="arrow-up" du-smooth-scroll du-scrollspy offset="20"></a>
+			<a href="#contact-hours" class="arrow-up" du-smooth-scroll du-scrollspy offset="20"></a>
 		</div>
 	</div>
 

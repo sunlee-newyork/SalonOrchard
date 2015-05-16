@@ -1,23 +1,28 @@
 <!-- HOME -->
-<snap-drawers>
+<!-- <snap-drawers>
 	<div ng-if="windowWidth > 415" class="background-img face-3"></div>
 	<div class="background-img face-2"></div>
 	<div snap-drawer="right" class="menubar">
 		<div class="nav" ng-repeat="tmp in templates" ng-click="changeTemplate(tmp)" snap-close>{{tmp.name}}</div>	
 	</div>
-</snap-drawers>
+</snap-drawers> -->
 
 <snap-content class="main">
+	<div class="bg-print"></div>
 	<div class="container-bg">
-		<div class="container vertical">
-			<div class="header">
-				<div class="logo"></div>
-				<button snap-toggle="right" class="menubar-toggle">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
+		<div class="header">
+			<div class="logo"></div>
+			<div class="nav">
+				<span ng-repeat="tmp in templates" ng-click="changeTemplate(tmp)">{{tmp.name}}</span>
 			</div>
+			<button snap-toggle="right" class="menubar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+		<div class="container">
+			
 			<div class="portal" ng-include="template">
 				
 			</div>
