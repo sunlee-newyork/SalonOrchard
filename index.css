@@ -699,7 +699,6 @@ h1, h2, h3, h4, h5, h6 {
 .stylists .content-body .content-section img.stylist-avatar {
 	float: left;
 	height: 100%;
-	margin: 0 3% 0 0;
 	border-radius: 15px;
 }
 .stylists .content-body .content-section .stylist-info {

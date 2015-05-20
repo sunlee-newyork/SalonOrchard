@@ -4,7 +4,7 @@ angular.module('app')
 	.controller('galleryController', ['$scope',
 	function ($scope) {
 
-		$scope.selected = '/assets/imgs/snapshots/20150326_200400.jpg';
+		$scope.selected = '/assets/imgs/stock-generic/download.jpeg';
 
 		$scope.selectHero = function (item) {
 			if (window.innerWidth < 415) {
