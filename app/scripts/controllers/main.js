@@ -60,8 +60,6 @@ angular.module('app')
 		if ($routeParams.template) {
 			$scope.template = $scope.templates[$routeParams.template];
 			$scope.templates[$routeParams.template].selected = true;
-		} else {
-			$scope.template = 'app/views/content/about.html';
 		}
 
 	}]);
