@@ -9,6 +9,6 @@ angular.module('app')
 
 		$interval(function() {
 			redirect();
-		}, 2500, 0);
+		}, 3500, 0);
 
 	}]);

@@ -16,9 +16,9 @@ angular.module('app')
 			{ category: 'color', services: [
 					{ name: 'Single Process Color', price: '$80 - $100' },
 					{ name: 'Double Process Color', price: '$130 - $180' },
-					{ name: '1/3 Highlights, Ombre or Balayage', price: '$80 - $100' },
-					{ name: '1/2 Highlights, Ombre or Balayage', price: '$130 - $180' },
-					{ name: 'Full Highlights, Ombre or Balayage', price: '$180 - $250' }
+					{ name: '1/3 Highlights, Ombre/Balayage', price: '$80 - $100' },
+					{ name: '1/2 Highlights, Ombre/Balayage', price: '$130 - $180' },
+					{ name: 'Full Highlights, Ombre/Balayage', price: '$180 - $250' }
 				] 
 			},
 			{ category: 'perms', services: [

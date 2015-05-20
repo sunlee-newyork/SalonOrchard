@@ -13,7 +13,7 @@
 		<div class="header">
 			<div class="logo"></div>
 			<div class="nav">
-				<span ng-repeat="tmp in templates" ng-click="changeTemplate(tmp)">{{tmp.name}}</span>
+				<span ng-class="{selected: tmp.selected}" ng-repeat="tmp in templates" ng-click="changeTemplate($event, tmp)">{{tmp.name}}</span>
 			</div>
 			<button snap-toggle="right" class="menubar-toggle">
 				<span></span>
@@ -23,7 +23,7 @@
 		</div>
 		<div class="container">
 			
-			<div class="portal" ng-include="template">
+			<div class="portal" ng-class="template.name" ng-include="template.url">
 				
 			</div>
 		</div>

@@ -10,8 +10,13 @@ angular.module('app')
 			$scope.windowWidth = value;
 		});
 
-		$scope.changeTemplate = function(tmp) {
-			$scope.template = tmp.url;
+		$scope.changeTemplate = function(event, tmp) {
+			for (var t in $scope.templates) {
+				$scope.templates[t].selected = false;				
+			}
+
+			tmp.selected = true;
+			$scope.template = tmp;
 			$location.path('/home/' + tmp.name, false);
 		}
 
@@ -22,32 +27,39 @@ angular.module('app')
 		$scope.templates = {
 			about: {
 				name: 'about',
-				url: 'app/views/content/about.html'
+				url: 'app/views/content/about.html',
+				selected: false
 			},
 			book: {
 				name: 'book',
-				url: 'app/views/content/book.html'
+				url: 'app/views/content/book.html',
+				selected: false
 			},
 			services: {
 				name: 'services',
-				url: 'app/views/content/services.html'
+				url: 'app/views/content/services.html',
+				selected: false
 			},
 			stylists: {
 				name: 'stylists',
-				url: 'app/views/content/stylists.html'
+				url: 'app/views/content/stylists.html',
+				selected: false
 			},
 			gallery: {
 				name: 'gallery',
-				url: 'app/views/content/gallery.html'
+				url: 'app/views/content/gallery.html',
+				selected: false
 			},
 			social: {
 				name: 'social',
-				url: 'app/views/content/social.html'
+				url: 'app/views/content/social.html',
+				selected: false
 			}
 		}
 
 		if ($routeParams.template) {
-			$scope.template = $scope.templates[$routeParams.template].url;
+			$scope.template = $scope.templates[$routeParams.template];
+			$scope.templates[$routeParams.template].selected = true;
 		} else {
 			$scope.template = 'app/views/content/about.html';
 		}
