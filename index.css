@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 	left: -22px;
 	width: 6%;
 	height: 107%;
-	background: url(/assets/imgs/logo-green-transparent.PNG) no-repeat center center;
+	background: url(/assets/imgs/logo-green-transparent.png) no-repeat center center;
 	background-size: contain;
 }
 .main .header .logo:hover {
