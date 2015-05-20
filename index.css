@@ -33,15 +33,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* - FONTS - */
-@font-face { font-family: 'SUNN'; src: url('../assets/fonts/SUNN.otf') format('opentype'); }
-@font-face { font-family: 'Jaapokki'; src: url('../assets/fonts/Jaapokki.otf') format('opentype'); }
-@font-face { font-family: 'Billy'; src: url('../assets/fonts/billy.ttf') format('truetype'); }
-@font-face { font-family: 'Chomp'; src: url('../assets/fonts/Chomp.ttf') format('truetype'); }
-@font-face { font-family: 'MoonLight'; src: url('../assets/fonts/Moon/MoonLight.otf') format('opentype'); }
-@font-face { font-family: 'MoonBold'; src: url('../assets/fonts/Moon/MoonBold.otf') format('opentype'); }
-@font-face { font-family: 'Simplifica'; src: url('../assets/fonts/Simplifica.ttf') format('truetype'); }
-@font-face { font-family: 'Panton'; src: url('../assets/fonts/Panton/PantonLightCaps.otf') format('opentype'); }
-@font-face { font-family: 'Asgalt'; src: url('../assets/fonts/Asgalt.ttf') format('truetype'); }
+@font-face { font-family: 'MoonLight'; src: url('/assets/fonts/Moon/MoonLight.otf') format('opentype'); }
+@font-face { font-family: 'MoonBold'; src: url('/assets/fonts/Moon/MoonBold.otf') format('opentype'); }
 /* - end FONTS - */
 
 /* - ANIMATIONS - */
@@ -145,10 +138,10 @@ h1, h2, h3, h4, h5, h6 {
 	width: 75%;
 	height: 300px;
 }
-.face-1 { background: url(../assets/imgs/face-1.JPG); }
-.face-2 { background-image: url(../assets/imgs/face-2.JPG); }
-.face-3 { background: url(../assets/imgs/face-3.JPG); }
-.face-4 { background: url(../assets/imgs/face-4.JPG); }
+.face-1 { background: url(/assets/imgs/face-1.JPG); }
+.face-2 { background-image: url(/assets/imgs/face-2.JPG); }
+.face-3 { background: url(/assets/imgs/face-3.JPG); }
+.face-4 { background: url(/assets/imgs/face-4.JPG); }
 .intro .container .face-1,
 .intro .container .face-2,
 .intro .container .face-3,
@@ -256,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 	left: -22px;
 	width: 6%;
 	height: 107%;
-	background: url(../assets/imgs/logo-green-transparent.PNG) no-repeat center center;
+	background: url(/assets/imgs/logo-green-transparent.PNG) no-repeat center center;
 	background-size: contain;
 }
 .main .header .logo:hover {
@@ -459,9 +452,6 @@ h1, h2, h3, h4, h5, h6 {
 .book {
 	height: 100%;
 }
-.book .content-body {
-	height: 100%;
-}
 .book .scrollbar-wrapper {
 	height: 100%;
 	background-size: cover;
@@ -511,7 +501,7 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 	width: 35%;
 	height: 100%;
-	background: url('../assets/imgs/snapshots/20150326_200249.jpg');
+	background: url(/assets/imgs/snapshots/20150326_200249.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
