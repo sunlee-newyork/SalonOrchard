@@ -661,7 +661,7 @@ h1, h2, h3, h4, h5, h6 {
 .stylists .content-navbar a {
 	display: block;
 	height: 160px;
-	margin: 7px 0;
+	margin: 19px 0;
 	padding: 12px 9px 12px 10px;
 	line-height: 19px;
 	color: #000;
@@ -742,9 +742,10 @@ h1, h2, h3, h4, h5, h6 {
 .stylists .content-body .content-section .stylist-info .stylist-info-body p {
 	float: left;
 	color: rgba(30,0,0,.7);
-	font-family: 'Moonlight';
+	/* font-family: 'Moonlight'; */
 	font-size: .7em;
 	line-height: 1.5;
+	margin: 0 0 20px 0;
 }
 .stylists .content-body .content-section .stylist-info .stylist-info-body a {
 	color: rgba(110,20,10, 1);
