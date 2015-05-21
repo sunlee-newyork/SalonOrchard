@@ -13,7 +13,7 @@
 html, body, div, img, p, a, span {
 	color: #000;
 	margin: 0;
-	font-family: 'Moonlight', Helvetica, Arial, sans-serif;
+	font-family: 'Chalet', Helvetica, Arial, sans-serif;
 }
 html {
 	height: 100%;
@@ -33,8 +33,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* - FONTS - */
-@font-face { font-family: 'MoonLight'; src: url('/assets/fonts/Moon/MoonLight.otf') format('opentype'); }
-@font-face { font-family: 'MoonBold'; src: url('/assets/fonts/Moon/MoonBold.otf') format('opentype'); }
+/*@font-face { font-family: 'MoonLight'; src: url('/assets/fonts/Moon/MoonLight.otf') format('opentype'); }
+@font-face { font-family: 'MoonBold'; src: url('/assets/fonts/Moon/MoonBold.otf') format('opentype'); }*/
+@font-face { 
+	font-family: 'Chalet'; 
+	src: url('/assets/fonts/Chalet/chalet-parisnineteensixty.eot') format('embedded-opentype'),
+			 url('/assets/fonts/Chalet/chalet-parisnineteensixty.ttf') format('truetype'),
+			 url('/assets/fonts/Chalet/chalet-parisnineteensixty.woff') format('woff'); 
+}
 /* - end FONTS - */
 
 /* - ANIMATIONS - */
@@ -272,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
     height: 100%;
     margin: 0 4px;
-    padding: 11px 20px;
+    padding: 13px 20px;
     font-size: 1.3em;
     background: rgba(130,68,0,1);
     color: #fff;
@@ -540,7 +546,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	width: 100%;
 	font-size: 2em;
-	font-family: 'MoonLight';
+	/*font-family: 'MoonLight';*/
 	color: rgba(85,10,0,1);
 	text-transform: uppercase;
 	word-break: break-all;
@@ -560,6 +566,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .services .items .item span {
 	float: left;
+	height: 100%;
 	font-size: .6em;
 }
 .services .items .item .price {
