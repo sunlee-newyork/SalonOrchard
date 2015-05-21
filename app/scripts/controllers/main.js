@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('app')
-	.controller('mainController', ['$scope', '$location', '$routeParams', '$window',
-	function ($scope, $location, $routeParams, $window) {
+	.controller('mainController', ['$scope', '$location', '$routeParams', '$window', '$http',
+	function ($scope, $location, $routeParams, $window, $http) {
 
 		$scope.$watch(function () {
 			return $window.innerWidth;
@@ -61,5 +61,13 @@ angular.module('app')
 			$scope.template = $scope.templates[$routeParams.template];
 			$scope.templates[$routeParams.template].selected = true;
 		}
+
+		// $scope.tracks = [];
+
+		// Spotify.getPlaylistTracks('sunlee1988', '2XcR60S72pCkV1gK9idPfw')
+		// 	.then(function (res) {
+		// 		$scope.tracks = res.items;
+		// 		console.log($scope.tracks);				
+		// 	});
 
 	}]);

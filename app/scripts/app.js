@@ -37,7 +37,7 @@ angular.module('app', [
 			snapRemoteProvider.globalOptions = { 
 	    	resistance: 0.8,
 	    	flickThreshold: 30,
-	    	minPosition: -250,
+	    	minPosition: -300,
 	    	disable: 'left', 
 	    	touchToDrag: false
 	    };
@@ -68,6 +68,17 @@ angular.module('app', [
 		}
     
 	})
+
+	// .config(function (SpotifyProvider) {
+
+	// 	var href = window.location.href;
+	// 	// console.log(location);
+
+	// 	SpotifyProvider.setClientId('ab4f68bfa479403382c2ffca21711cbe');
+	// 	SpotifyProvider.setRedirectUri(href);
+	// 	SpotifyProvider.setAuthToken('BQCYvLR-9OVbF0nv1c1QzpsIaXkHxNEy13tewS0eJ5H40fwWMksMgZ8M65-30RuEzTH7cXoZjCJXd9tZFqUYX3oHIanU672AO2qqEIK7PWcm-BZuC_GeCVJS3WpJtFTtTpu9ovY38Sem0Ik');
+
+	// })
 	
 	.run(['$route', '$rootScope', '$location', function ($route, $rootScope, $location) {
     var original = $location.path;
