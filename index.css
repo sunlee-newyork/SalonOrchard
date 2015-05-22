@@ -108,10 +108,10 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: rgba(36, 36, 36, 1);
 }
 .spotify .play-button {
-	margin-top: 60px;
+	margin-top: 10%;
 }
 .spotify .follow-button {
-	margin: 45px 0 0 103px;
+	margin: 10% 0 0 103px;
 	display: block;
 }
 .spotify h3,
@@ -125,15 +125,15 @@ h1, h2, h3, h4, h5, h6 {
 .spotify h3 {
 	height: 150px;
 	line-height: 45px;
-	margin-top: 70px;
+	margin-top: 15%;
 	font-size: 4.5em;
 	text-align: left;
 }
 .spotify span {
 	bottom: 50px;
-	margin-top: 20px;
+	margin-top: 7%;
 	font-size: 1.2em;
-	line-height: 17px;
+	line-height: 19px;
 }
 /* - end Spotify - */
 
