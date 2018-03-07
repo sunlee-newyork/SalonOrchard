@@ -1,5 +1,5 @@
 {
-  "name": "Salon Orchard NYC",
+  "name": "salon-orchard",
   "main": "index.html",
   "version": "1.0",
   "homepage": "http://www.salonorchardnyc.com",
@@ -12,7 +12,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
+    "public/components",
     "test",
     "tests"
   ],
